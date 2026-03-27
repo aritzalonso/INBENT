@@ -40,9 +40,11 @@
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowCount = 5;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 56F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 66F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.Size = new Size(641, 463);
             tableLayoutPanel1.TabIndex = 0;
