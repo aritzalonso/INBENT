@@ -6,5 +6,23 @@ namespace INBENT_VISUAL
         {
             InitializeComponent();
         }
+
+        private void LErabiltzaailea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BHasiSaioa_Click(object sender, EventArgs e)
+        {
+            string message = "hola";
+            string caption = "proba";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            MessageBox.Show(message, caption, buttons);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
