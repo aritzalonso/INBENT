@@ -1,8 +1,8 @@
 namespace INBENT_VISUAL
 {
-    public partial class Form1 : Form
+    public partial class FHasiera : Form
     {
-        public Form1()
+        public FHasiera()
         {
             InitializeComponent();
         }

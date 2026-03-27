@@ -1,6 +1,6 @@
 ﻿namespace INBENT_VISUAL
 {
-    partial class Form1
+    partial class FHasiera
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            SuspendLayout();
+            // 
+            // FHasiera
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Name = "FHasiera";
             Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
