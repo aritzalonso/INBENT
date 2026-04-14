@@ -19,6 +19,7 @@ namespace INBENT_VISUAL
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FHasiera));
             tableLayoutPanel1 = new TableLayoutPanel();
             panelLogin = new Panel();
             BIrten = new Button();
@@ -34,6 +35,8 @@ namespace INBENT_VISUAL
             // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackgroundImage = (Image)resources.GetObject("tableLayoutPanel1.BackgroundImage");
+            tableLayoutPanel1.BackgroundImageLayout = ImageLayout.Stretch;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
@@ -43,10 +46,10 @@ namespace INBENT_VISUAL
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 29.1262131F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 38.8349533F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.0388336F));
-            tableLayoutPanel1.Size = new Size(733, 617);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.Size = new Size(784, 550);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panelLogin
@@ -61,10 +64,10 @@ namespace INBENT_VISUAL
             panelLogin.Controls.Add(TErabiltzailea);
             panelLogin.Controls.Add(LErabiltzailea);
             panelLogin.Controls.Add(LTitle);
-            panelLogin.Location = new Point(165, 179);
+            panelLogin.Location = new Point(161, 117);
             panelLogin.Margin = new Padding(0);
             panelLogin.Name = "panelLogin";
-            panelLogin.Size = new Size(400, 239);
+            panelLogin.Size = new Size(459, 316);
             panelLogin.TabIndex = 0;
             // 
             // BIrten
@@ -101,7 +104,7 @@ namespace INBENT_VISUAL
             // 
             TPasahitza.BorderStyle = BorderStyle.FixedSingle;
             TPasahitza.Font = new Font("Segoe UI", 11F);
-            TPasahitza.Location = new Point(30, 185);
+            TPasahitza.Location = new Point(30, 182);
             TPasahitza.Name = "TPasahitza";
             TPasahitza.PlaceholderText = "Sartu zure pasahitza";
             TPasahitza.Size = new Size(340, 27);
@@ -123,7 +126,7 @@ namespace INBENT_VISUAL
             // 
             TErabiltzailea.BorderStyle = BorderStyle.FixedSingle;
             TErabiltzailea.Font = new Font("Segoe UI", 11F);
-            TErabiltzailea.Location = new Point(30, 110);
+            TErabiltzailea.Location = new Point(30, 107);
             TErabiltzailea.Name = "TErabiltzailea";
             TErabiltzailea.PlaceholderText = "Sartu zure erabiltzailea";
             TErabiltzailea.Size = new Size(340, 27);
@@ -145,11 +148,12 @@ namespace INBENT_VISUAL
             LTitle.AutoSize = true;
             LTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             LTitle.ForeColor = Color.FromArgb(50, 50, 50);
-            LTitle.Location = new Point(30, 30);
+            LTitle.Location = new Point(30, 31);
             LTitle.Name = "LTitle";
             LTitle.Size = new Size(140, 32);
             LTitle.TabIndex = 0;
             LTitle.Text = "Ongi etorri";
+            LTitle.TextAlign = ContentAlignment.TopCenter;
             // 
             // FHasiera
             // 
@@ -157,8 +161,9 @@ namespace INBENT_VISUAL
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 245, 245);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             CancelButton = BIrten;
-            ClientSize = new Size(733, 617);
+            ClientSize = new Size(784, 550);
             Controls.Add(tableLayoutPanel1);
             Name = "FHasiera";
             StartPosition = FormStartPosition.CenterScreen;
