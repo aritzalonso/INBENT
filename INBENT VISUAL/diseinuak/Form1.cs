@@ -23,7 +23,7 @@ namespace INBENT_VISUAL
             {
                 MessageBox.Show("Sartu pasahitza.", "Abisua", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TPasahitza.Focus();
-                return; 
+                return;
             }
 
             if (erabiltzailea == "admin" && pasahitza == "password")
@@ -42,6 +42,21 @@ namespace INBENT_VISUAL
         private void BIrten_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FHasiera_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
