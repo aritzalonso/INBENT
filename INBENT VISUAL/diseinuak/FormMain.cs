@@ -14,7 +14,7 @@ namespace INBENT_VISUAL.diseinuak
     {
         public FormMain()
         {
-            InitializeComponent();
+            InitializeComponent();a
         }
 
         private void InitializeComponent()
