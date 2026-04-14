@@ -21,13 +21,13 @@ namespace INBENT_VISUAL
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             panelLogin = new Panel();
-            LTitle = new Label();
-            LErabiltzailea = new Label();
-            TErabiltzailea = new TextBox();
-            LPasahitza = new Label();
-            TPasahitza = new TextBox();
-            BSaioa = new Button();
             BIrten = new Button();
+            BSaioa = new Button();
+            TPasahitza = new TextBox();
+            LPasahitza = new Label();
+            TErabiltzailea = new TextBox();
+            LErabiltzailea = new Label();
+            LTitle = new Label();
             tableLayoutPanel1.SuspendLayout();
             panelLogin.SuspendLayout();
             SuspendLayout();
@@ -35,22 +35,24 @@ namespace INBENT_VISUAL
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.34F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33F));
-            tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.34F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.33F));
-            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 60F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Controls.Add(panelLogin, 1, 1);
+            tableLayoutPanel1.Dock = DockStyle.Fill;
+            tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 29.1262131F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 38.8349533F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 32.0388336F));
+            tableLayoutPanel1.Size = new Size(733, 617);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panelLogin
             // 
-            panelLogin.BackColor = Color.White;
             panelLogin.Anchor = AnchorStyles.None;
+            panelLogin.BackColor = Color.White;
             panelLogin.BorderStyle = BorderStyle.FixedSingle;
             panelLogin.Controls.Add(BIrten);
             panelLogin.Controls.Add(BSaioa);
@@ -59,64 +61,26 @@ namespace INBENT_VISUAL
             panelLogin.Controls.Add(TErabiltzailea);
             panelLogin.Controls.Add(LErabiltzailea);
             panelLogin.Controls.Add(LTitle);
-                panelLogin.Location = new Point(0, 0);
+            panelLogin.Location = new Point(165, 179);
             panelLogin.Margin = new Padding(0);
-            panelLogin.Size = new Size(400, 350);
+            panelLogin.Name = "panelLogin";
+            panelLogin.Size = new Size(400, 239);
             panelLogin.TabIndex = 0;
             // 
-            // LTitle
+            // BIrten
             // 
-            LTitle.AutoSize = true;
-            LTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            LTitle.ForeColor = Color.FromArgb(50, 50, 50);
-            LTitle.Location = new Point(30, 30);
-            LTitle.Name = "LTitle";
-            LTitle.Size = new Size(160, 32);
-            LTitle.TabIndex = 0;
-            LTitle.Text = "Ongi etorri";
-            // 
-            // LErabiltzailea
-            // 
-            LErabiltzailea.AutoSize = true;
-            LErabiltzailea.Font = new Font("Segoe UI", 10F);
-            LErabiltzailea.ForeColor = Color.FromArgb(100, 100, 100);
-            LErabiltzailea.Location = new Point(30, 85);
-            LErabiltzailea.Name = "LErabiltzailea";
-            LErabiltzailea.Size = new Size(76, 19);
-            LErabiltzailea.TabIndex = 1;
-            LErabiltzailea.Text = "Erabiltzailea";
-            // 
-            // TErabiltzailea
-            // 
-            TErabiltzailea.BorderStyle = BorderStyle.FixedSingle;
-            TErabiltzailea.Font = new Font("Segoe UI", 11F);
-            TErabiltzailea.Location = new Point(30, 110);
-            TErabiltzailea.Name = "TErabiltzailea";
-            TErabiltzailea.PlaceholderText = "Sartu zure erabiltzailea";
-            TErabiltzailea.Size = new Size(340, 27);
-            TErabiltzailea.TabIndex = 2;
-            // 
-            // LPasahitza
-            // 
-            LPasahitza.AutoSize = true;
-            LPasahitza.Font = new Font("Segoe UI", 10F);
-            LPasahitza.ForeColor = Color.FromArgb(100, 100, 100);
-            LPasahitza.Location = new Point(30, 160);
-            LPasahitza.Name = "LPasahitza";
-            LPasahitza.Size = new Size(69, 19);
-            LPasahitza.TabIndex = 3;
-            LPasahitza.Text = "Pasahitza";
-            // 
-            // TPasahitza
-            // 
-            TPasahitza.BorderStyle = BorderStyle.FixedSingle;
-            TPasahitza.Font = new Font("Segoe UI", 11F);
-            TPasahitza.Location = new Point(30, 185);
-            TPasahitza.Name = "TPasahitza";
-            TPasahitza.PlaceholderText = "Sartu zure pasahitza";
-            TPasahitza.Size = new Size(340, 27);
-            TPasahitza.TabIndex = 4;
-            TPasahitza.UseSystemPasswordChar = true;
+            BIrten.BackColor = Color.FromArgb(220, 220, 220);
+            BIrten.FlatAppearance.BorderSize = 0;
+            BIrten.FlatStyle = FlatStyle.Flat;
+            BIrten.Font = new Font("Segoe UI", 11F);
+            BIrten.ForeColor = Color.FromArgb(80, 80, 80);
+            BIrten.Location = new Point(210, 250);
+            BIrten.Name = "BIrten";
+            BIrten.Size = new Size(160, 40);
+            BIrten.TabIndex = 6;
+            BIrten.Text = "Irten";
+            BIrten.UseVisualStyleBackColor = false;
+            BIrten.Click += BIrten_Click;
             // 
             // BSaioa
             // 
@@ -133,20 +97,59 @@ namespace INBENT_VISUAL
             BSaioa.UseVisualStyleBackColor = false;
             BSaioa.Click += BSaioa_Click;
             // 
-            // BIrten
+            // TPasahitza
             // 
-            BIrten.BackColor = Color.FromArgb(220, 220, 220);
-            BIrten.FlatAppearance.BorderSize = 0;
-            BIrten.FlatStyle = FlatStyle.Flat;
-            BIrten.Font = new Font("Segoe UI", 11F);
-            BIrten.ForeColor = Color.FromArgb(80, 80, 80);
-            BIrten.Location = new Point(210, 250);
-            BIrten.Name = "BIrten";
-            BIrten.Size = new Size(160, 40);
-            BIrten.TabIndex = 6;
-            BIrten.Text = "Irten";
-            BIrten.UseVisualStyleBackColor = false;
-            BIrten.Click += BIrten_Click;
+            TPasahitza.BorderStyle = BorderStyle.FixedSingle;
+            TPasahitza.Font = new Font("Segoe UI", 11F);
+            TPasahitza.Location = new Point(30, 185);
+            TPasahitza.Name = "TPasahitza";
+            TPasahitza.PlaceholderText = "Sartu zure pasahitza";
+            TPasahitza.Size = new Size(340, 27);
+            TPasahitza.TabIndex = 4;
+            TPasahitza.UseSystemPasswordChar = true;
+            // 
+            // LPasahitza
+            // 
+            LPasahitza.AutoSize = true;
+            LPasahitza.Font = new Font("Segoe UI", 10F);
+            LPasahitza.ForeColor = Color.FromArgb(100, 100, 100);
+            LPasahitza.Location = new Point(30, 160);
+            LPasahitza.Name = "LPasahitza";
+            LPasahitza.Size = new Size(66, 19);
+            LPasahitza.TabIndex = 3;
+            LPasahitza.Text = "Pasahitza";
+            // 
+            // TErabiltzailea
+            // 
+            TErabiltzailea.BorderStyle = BorderStyle.FixedSingle;
+            TErabiltzailea.Font = new Font("Segoe UI", 11F);
+            TErabiltzailea.Location = new Point(30, 110);
+            TErabiltzailea.Name = "TErabiltzailea";
+            TErabiltzailea.PlaceholderText = "Sartu zure erabiltzailea";
+            TErabiltzailea.Size = new Size(340, 27);
+            TErabiltzailea.TabIndex = 2;
+            // 
+            // LErabiltzailea
+            // 
+            LErabiltzailea.AutoSize = true;
+            LErabiltzailea.Font = new Font("Segoe UI", 10F);
+            LErabiltzailea.ForeColor = Color.FromArgb(100, 100, 100);
+            LErabiltzailea.Location = new Point(30, 85);
+            LErabiltzailea.Name = "LErabiltzailea";
+            LErabiltzailea.Size = new Size(80, 19);
+            LErabiltzailea.TabIndex = 1;
+            LErabiltzailea.Text = "Erabiltzailea";
+            // 
+            // LTitle
+            // 
+            LTitle.AutoSize = true;
+            LTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            LTitle.ForeColor = Color.FromArgb(50, 50, 50);
+            LTitle.Location = new Point(30, 30);
+            LTitle.Name = "LTitle";
+            LTitle.Size = new Size(140, 32);
+            LTitle.TabIndex = 0;
+            LTitle.Text = "Ongi etorri";
             // 
             // FHasiera
             // 
