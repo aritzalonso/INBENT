@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace INBENT_VISUAL
+namespace INBENT_VISUAL.diseinuak 
 {
-    partial class FHasiera
+    partial class Form1 : Form
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -20,17 +20,17 @@ namespace INBENT_VISUAL
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FHasiera));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             tableLayoutPanel1 = new TableLayoutPanel();
             panelLogin = new Panel();
+            pictureBox1 = new PictureBox();
             BIrten = new Button();
             BSaioa = new Button();
-            TPasahitza = new TextBox();
+            txtPasahitza = new TextBox();
             LPasahitza = new Label();
-            TErabiltzailea = new TextBox();
+            txtIzena = new TextBox();
             LErabiltzailea = new Label();
             LTitle = new Label();
-            pictureBox1 = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             panelLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -55,7 +55,6 @@ namespace INBENT_VISUAL
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Size = new Size(896, 733);
             tableLayoutPanel1.TabIndex = 0;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint_1;
             // 
             // panelLogin
             // 
@@ -64,9 +63,9 @@ namespace INBENT_VISUAL
             panelLogin.Controls.Add(pictureBox1);
             panelLogin.Controls.Add(BIrten);
             panelLogin.Controls.Add(BSaioa);
-            panelLogin.Controls.Add(TPasahitza);
+            panelLogin.Controls.Add(txtPasahitza);
             panelLogin.Controls.Add(LPasahitza);
-            panelLogin.Controls.Add(TErabiltzailea);
+            panelLogin.Controls.Add(txtIzena);
             panelLogin.Controls.Add(LErabiltzailea);
             panelLogin.Controls.Add(LTitle);
             panelLogin.Location = new Point(185, 155);
@@ -74,6 +73,16 @@ namespace INBENT_VISUAL
             panelLogin.Name = "panelLogin";
             panelLogin.Size = new Size(524, 421);
             panelLogin.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Location = new Point(375, 25);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(125, 62);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
             // 
             // BIrten
             // 
@@ -105,18 +114,19 @@ namespace INBENT_VISUAL
             BSaioa.TabIndex = 5;
             BSaioa.Text = "Sartu";
             BSaioa.UseVisualStyleBackColor = false;
+            BSaioa.Click += BSaioa_Click_1;
             // 
-            // TPasahitza
+            // txtPasahitza
             // 
-            TPasahitza.BackColor = Color.FromArgb(245, 247, 250);
-            TPasahitza.Font = new Font("Segoe UI", 13F);
-            TPasahitza.Location = new Point(34, 243);
-            TPasahitza.Margin = new Padding(10);
-            TPasahitza.Name = "TPasahitza";
-            TPasahitza.PlaceholderText = "  Sartu zure pasahitza";
-            TPasahitza.Size = new Size(388, 36);
-            TPasahitza.TabIndex = 4;
-            TPasahitza.UseSystemPasswordChar = true;
+            txtPasahitza.BackColor = Color.FromArgb(245, 247, 250);
+            txtPasahitza.Font = new Font("Segoe UI", 13F);
+            txtPasahitza.Location = new Point(34, 243);
+            txtPasahitza.Margin = new Padding(10);
+            txtPasahitza.Name = "txtPasahitza";
+            txtPasahitza.PlaceholderText = "  Sartu zure pasahitza";
+            txtPasahitza.Size = new Size(388, 36);
+            txtPasahitza.TabIndex = 4;
+            txtPasahitza.UseSystemPasswordChar = true;
             // 
             // LPasahitza
             // 
@@ -129,16 +139,16 @@ namespace INBENT_VISUAL
             LPasahitza.TabIndex = 3;
             LPasahitza.Text = "Pasahitza";
             // 
-            // TErabiltzailea
+            // txtIzena
             // 
-            TErabiltzailea.BackColor = Color.FromArgb(245, 247, 250);
-            TErabiltzailea.Font = new Font("Segoe UI", 13F);
-            TErabiltzailea.Location = new Point(34, 143);
-            TErabiltzailea.Margin = new Padding(10);
-            TErabiltzailea.Name = "TErabiltzailea";
-            TErabiltzailea.PlaceholderText = "  Sartu zure erabiltzailea";
-            TErabiltzailea.Size = new Size(388, 36);
-            TErabiltzailea.TabIndex = 2;
+            txtIzena.BackColor = Color.FromArgb(245, 247, 250);
+            txtIzena.Font = new Font("Segoe UI", 13F);
+            txtIzena.Location = new Point(34, 143);
+            txtIzena.Margin = new Padding(10);
+            txtIzena.Name = "txtIzena";
+            txtIzena.PlaceholderText = "  Sartu zure erabiltzailea";
+            txtIzena.Size = new Size(388, 36);
+            txtIzena.TabIndex = 2;
             // 
             // LErabiltzailea
             // 
@@ -163,32 +173,21 @@ namespace INBENT_VISUAL
             LTitle.Text = "Ongi etorri";
             LTitle.TextAlign = ContentAlignment.TopCenter;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(375, 25);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 62);
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
-            // 
-            // FHasiera
+            // Form1
             // 
             AcceptButton = BSaioa;
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 245, 245);
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             CancelButton = BIrten;
             ClientSize = new Size(896, 733);
             Controls.Add(tableLayoutPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            Name = "FHasiera";
+            Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Saioa hasi";
-            Load += FHasiera_Load;
+            WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.ResumeLayout(false);
             panelLogin.ResumeLayout(false);
             panelLogin.PerformLayout();
@@ -202,9 +201,9 @@ namespace INBENT_VISUAL
         private Panel panelLogin;
         private Label LTitle;
         private Label LErabiltzailea;
-        private TextBox TErabiltzailea;
+        private TextBox txtIzena;
         private Label LPasahitza;
-        private TextBox TPasahitza;
+        private TextBox txtPasahitza;
         private Button BSaioa;
         private Button BIrten;
         private PictureBox pictureBox1;

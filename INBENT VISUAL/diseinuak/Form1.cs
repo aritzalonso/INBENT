@@ -1,62 +1,63 @@
-namespace INBENT_VISUAL
+using INBENT_VISUAL.Kudeatzaileak;
+using System;
+using System.Windows.Forms;
+
+namespace INBENT_VISUAL.diseinuak
 {
-    public partial class FHasiera : Form
+    public partial class Form1 : Form
     {
-        public FHasiera()
+        // El Login empieza vacío, sin pedir roles
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void BSaioa_Click(object sender, EventArgs e)
-        {
-            string erabiltzailea = TErabiltzailea.Text?.Trim() ?? string.Empty;
-            string pasahitza = TPasahitza.Text ?? string.Empty;
+        // El botón para entrar
 
-            if (string.IsNullOrEmpty(erabiltzailea))
-            {
-                MessageBox.Show("Sartu erabiltzailea.", "Abisua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TErabiltzailea.Focus();
-                return;
-            }
 
-            if (string.IsNullOrEmpty(pasahitza))
-            {
-                MessageBox.Show("Sartu pasahitza.", "Abisua", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TPasahitza.Focus();
-                return;
-            }
 
-            if (erabiltzailea == "admin" && pasahitza == "password")
-            {
-                MessageBox.Show($"Ongi etorri, {erabiltzailea}.", "Saioa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Erabiltzailea edo pasahitza okerra.", "Errorea", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                TPasahitza.Clear();
-                TErabiltzailea.Focus();
-            }
-        }
-
+        // El botón para salir
         private void BIrten_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        // --- DEJAMOS ESTOS EVENTOS VACÍOS PARA QUE EL DESIGNER NO DE ERROR ---
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e) { }
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e) { }
+        private void FHasiera_Load(object sender, EventArgs e) { }
+       
+
+        private void BSaioa_Click_1(object sender, EventArgs e)
         {
+            string izena = txtIzena.Text.Trim();
+            string pasahitza = txtPasahitza.Text.Trim();
 
-        }
+            if (string.IsNullOrWhiteSpace(izena) || string.IsNullOrWhiteSpace(pasahitza))
+            {
+                MessageBox.Show("Mesedez, sartu erabiltzailea eta pasahitza.", "Datu falta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
+            Erabiltzaile_kudeaketa kudeatzailea = new Erabiltzaile_kudeaketa();
+            string rola = kudeatzailea.EgiaztatuLogin(izena, pasahitza);
 
-        }
+            if (rola != null)
+            {
+                this.Hide();
 
-        private void FHasiera_Load(object sender, EventArgs e)
-        {
+                // ¡Aquí es donde engancha con tu FHasiera!
+                FHasiera pantailaNagusia = new FHasiera(izena, rola);
+                pantailaNagusia.ShowDialog();
 
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Erabiltzailea edo pasahitza ez dira zuzenak.", "Sarrera ukatuta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPasahitza.Clear();
+                txtPasahitza.Focus();
+            }
         }
     }
 }

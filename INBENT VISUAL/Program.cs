@@ -1,3 +1,5 @@
+using INBENT_VISUAL.diseinuak;
+
 namespace INBENT_VISUAL
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace INBENT_VISUAL
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FHasiera());
+            Application.Run(new Form1());
         }
     }
 }
