@@ -1,21 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace INBENT_VISUAL.Entitateak
+﻿namespace INBENT_VISUAL.Entitateak
 {
+    /// <summary>
+    /// Sisteman saioa hasi dezaketen pertsonen klasea.
+    /// </summary>
     public class Erabiltzailea
     {
+        #region PROPIETATEAK
+        // Datu-baseko oinarrizko identifikadoreak
         public int IdErabiltzailea { get; set; }
         public string Izena { get; set; }
         public string Pasahitza { get; set; }
-        // Guardamos los IDs reales de la base de datos
         public int IdRola { get; set; }
         public int IdMintegia { get; set; }
 
-        // Constructor
+        // Kanpoko propietateak (Beste taula batzuetatik datozen testuak, pantailan erakusteko)
+        public string RolIzena { get; set; }
+        public string MintegiIzena { get; set; }
+        #endregion
+
+        #region ERAIKITZAILEAK
+        /// <summary>
+        /// Eraikitzaile osoa (Datu guztiak jaso eta objektua sortzeko).
+        /// </summary>
         public Erabiltzailea(int id, string izena, string pasahitza, int idRola, int idMintegia)
         {
             this.IdErabiltzailea = id;
@@ -24,5 +30,11 @@ namespace INBENT_VISUAL.Entitateak
             this.IdRola = idRola;
             this.IdMintegia = idMintegia;
         }
+
+        /// <summary>
+        /// Eraikitzaile hutsa (Oso erabilgarria objektua sortu eta gero datuak banaka sartzeko).
+        /// </summary>
+        public Erabiltzailea() { }
+        #endregion
     }
 }

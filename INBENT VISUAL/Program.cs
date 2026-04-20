@@ -1,19 +1,25 @@
+using System;
+using System.Windows.Forms;
 using INBENT_VISUAL.diseinuak;
 
 namespace INBENT_VISUAL
 {
     internal static class Program
     {
+        #region APLIKAZIOAREN ABIAPUNTUA (PUNTO DE ENTRADA)
         /// <summary>
-        ///  The main entry point for the application.
+        /// Aplikazioaren sarrera-puntu nagusia (Main).
+        /// Hemen konfiguratzen da eta abiarazten da lehenengo leihoa.
         /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            // Aplikazioaren oinarrizko konfigurazioa (DPI, letra-tipoak, etab.)
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+
+            // POO / Arkitektura: Gure aplikazioa BETI Login leihoarekin hasiko da
+            Application.Run(new FLogin());
         }
+        #endregion
     }
 }

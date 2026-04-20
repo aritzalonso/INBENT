@@ -25,8 +25,6 @@
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.lblGela = new System.Windows.Forms.Label();
             this.txtGela = new System.Windows.Forms.TextBox();
-
-            // Paneles
             this.pnlOrdenagailua = new System.Windows.Forms.Panel();
             this.lblRAM = new System.Windows.Forms.Label();
             this.txtRAM = new System.Windows.Forms.TextBox();
@@ -34,134 +32,274 @@
             this.txtROM = new System.Windows.Forms.TextBox();
             this.lblCPU = new System.Windows.Forms.Label();
             this.txtCPU = new System.Windows.Forms.TextBox();
-
             this.pnlInprimagailua = new System.Windows.Forms.Panel();
             this.lblKoloretakoa = new System.Windows.Forms.Label();
             this.cmbKoloretakoa = new System.Windows.Forms.ComboBox();
-
             this.lblErosteData = new System.Windows.Forms.Label();
             this.dtpErosteData = new System.Windows.Forms.DateTimePicker();
-
             this.btnGorde = new System.Windows.Forms.Button();
             this.btnEzeztatu = new System.Windows.Forms.Button();
-
             this.panelHeader.SuspendLayout();
             this.pnlOrdenagailua.SuspendLayout();
             this.pnlInprimagailua.SuspendLayout();
             this.SuspendLayout();
 
-            // Cabecera
+            // 
+            // panelHeader
+            // 
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(33, 47, 61);
             this.panelHeader.Controls.Add(this.lblTituloa);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(420, 50);
+            this.panelHeader.TabIndex = 0;
 
-            // Título corregido (AutoSize = true)
+            // 
+            // lblTituloa
+            // 
             this.lblTituloa.AutoSize = true;
             this.lblTituloa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblTituloa.ForeColor = System.Drawing.Color.White;
-            this.lblTituloa.Text = "Gailuaren Kudeaketa";
             this.lblTituloa.Location = new System.Drawing.Point(12, 11);
+            this.lblTituloa.Name = "lblTituloa";
+            this.lblTituloa.Size = new System.Drawing.Size(206, 28);
+            this.lblTituloa.TabIndex = 1;
+            this.lblTituloa.Text = "Gailuaren Kudeaketa";
 
-            // Selector de Tipo
+            // 
+            // lblMota
+            // 
             this.lblMota.AutoSize = true;
-            this.lblMota.Text = "Gailu Mota:";
             this.lblMota.Location = new System.Drawing.Point(30, 70);
-            this.cmbMota.Items.AddRange(new object[] { "Ordenagailua", "Inprimagailua" });
-            this.cmbMota.Location = new System.Drawing.Point(34, 95);
-            this.cmbMota.Size = new System.Drawing.Size(350, 28);
+            this.lblMota.Name = "lblMota";
+            this.lblMota.Size = new System.Drawing.Size(76, 16);
+            this.lblMota.TabIndex = 2;
+            this.lblMota.Text = "Gailu Mota:";
+
+            // 
+            // cmbMota
+            // 
             this.cmbMota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMota.FormattingEnabled = true;
+            this.cmbMota.Items.AddRange(new object[] {
+            "Ordenagailua",
+            "Inprimagailua"});
+            this.cmbMota.Location = new System.Drawing.Point(34, 95);
+            this.cmbMota.Name = "cmbMota";
+            this.cmbMota.Size = new System.Drawing.Size(350, 24);
+            this.cmbMota.TabIndex = 3;
             this.cmbMota.SelectedIndexChanged += new System.EventHandler(this.cmbMota_SelectedIndexChanged);
 
-            // Datos Comunes
+            // 
+            // lblMarka
+            // 
             this.lblMarka.AutoSize = true;
-            this.lblMarka.Text = "Marka:";
             this.lblMarka.Location = new System.Drawing.Point(30, 135);
+            this.lblMarka.Name = "lblMarka";
+            this.lblMarka.Size = new System.Drawing.Size(48, 16);
+            this.lblMarka.TabIndex = 4;
+            this.lblMarka.Text = "Marka:";
+
+            // 
+            // txtMarka
+            // 
             this.txtMarka.Location = new System.Drawing.Point(34, 160);
-            this.txtMarka.Size = new System.Drawing.Size(165, 27);
+            this.txtMarka.Name = "txtMarka";
+            this.txtMarka.Size = new System.Drawing.Size(165, 22);
+            this.txtMarka.TabIndex = 5;
 
+            // 
+            // lblGela
+            // 
             this.lblGela.AutoSize = true;
-            this.lblGela.Text = "Gela:";
             this.lblGela.Location = new System.Drawing.Point(215, 135);
-            this.txtGela.Location = new System.Drawing.Point(219, 160);
-            this.txtGela.Size = new System.Drawing.Size(165, 27);
+            this.lblGela.Name = "lblGela";
+            this.lblGela.Size = new System.Drawing.Size(39, 16);
+            this.lblGela.TabIndex = 6;
+            this.lblGela.Text = "Gela:";
 
-            // ==========================================
-            // PANEL ORDENADOR
-            // ==========================================
+            // 
+            // txtGela
+            // 
+            this.txtGela.Location = new System.Drawing.Point(219, 160);
+            this.txtGela.Name = "txtGela";
+            this.txtGela.Size = new System.Drawing.Size(165, 22);
+            this.txtGela.TabIndex = 7;
+
+            // 
+            // pnlOrdenagailua
+            // 
+            this.pnlOrdenagailua.Controls.Add(this.lblRAM);
+            this.pnlOrdenagailua.Controls.Add(this.txtRAM);
+            this.pnlOrdenagailua.Controls.Add(this.lblROM);
+            this.pnlOrdenagailua.Controls.Add(this.txtROM);
+            this.pnlOrdenagailua.Controls.Add(this.lblCPU);
+            this.pnlOrdenagailua.Controls.Add(this.txtCPU);
             this.pnlOrdenagailua.Location = new System.Drawing.Point(30, 200);
+            this.pnlOrdenagailua.Name = "pnlOrdenagailua";
             this.pnlOrdenagailua.Size = new System.Drawing.Size(360, 130);
+            this.pnlOrdenagailua.TabIndex = 8;
             this.pnlOrdenagailua.Visible = false;
 
-            // RAM
+            // 
+            // lblRAM
+            // 
             this.lblRAM.AutoSize = true;
-            this.lblRAM.Text = "RAM:";
             this.lblRAM.Location = new System.Drawing.Point(0, 0);
+            this.lblRAM.Name = "lblRAM";
+            this.lblRAM.Size = new System.Drawing.Size(40, 16);
+            this.lblRAM.TabIndex = 0;
+            this.lblRAM.Text = "RAM:";
+
+            // 
+            // txtRAM
+            // 
             this.txtRAM.Location = new System.Drawing.Point(4, 25);
-            this.txtRAM.Size = new System.Drawing.Size(165, 27);
+            this.txtRAM.Name = "txtRAM";
+            this.txtRAM.Size = new System.Drawing.Size(165, 22);
+            this.txtRAM.TabIndex = 1;
 
-            // ROM
+            // 
+            // lblROM
+            // 
             this.lblROM.AutoSize = true;
-            this.lblROM.Text = "ROM:";
             this.lblROM.Location = new System.Drawing.Point(185, 0);
+            this.lblROM.Name = "lblROM";
+            this.lblROM.Size = new System.Drawing.Size(41, 16);
+            this.lblROM.TabIndex = 2;
+            this.lblROM.Text = "ROM:";
+
+            // 
+            // txtROM
+            // 
             this.txtROM.Location = new System.Drawing.Point(189, 25);
-            this.txtROM.Size = new System.Drawing.Size(165, 27);
+            this.txtROM.Name = "txtROM";
+            this.txtROM.Size = new System.Drawing.Size(165, 22);
+            this.txtROM.TabIndex = 3;
 
-            // CPU
+            // 
+            // lblCPU
+            // 
             this.lblCPU.AutoSize = true;
-            this.lblCPU.Text = "CPU:";
             this.lblCPU.Location = new System.Drawing.Point(0, 65);
+            this.lblCPU.Name = "lblCPU";
+            this.lblCPU.Size = new System.Drawing.Size(38, 16);
+            this.lblCPU.TabIndex = 4;
+            this.lblCPU.Text = "CPU:";
+
+            // 
+            // txtCPU
+            // 
             this.txtCPU.Location = new System.Drawing.Point(4, 90);
-            this.txtCPU.Size = new System.Drawing.Size(350, 27);
+            this.txtCPU.Name = "txtCPU";
+            this.txtCPU.Size = new System.Drawing.Size(350, 22);
+            this.txtCPU.TabIndex = 5;
 
-            this.pnlOrdenagailua.Controls.AddRange(new System.Windows.Forms.Control[] { this.lblRAM, this.txtRAM, this.lblROM, this.txtROM, this.lblCPU, this.txtCPU });
-
-            // ==========================================
-            // PANEL IMPRESORA
-            // ==========================================
+            // 
+            // pnlInprimagailua
+            // 
+            this.pnlInprimagailua.Controls.Add(this.lblKoloretakoa);
+            this.pnlInprimagailua.Controls.Add(this.cmbKoloretakoa);
             this.pnlInprimagailua.Location = new System.Drawing.Point(30, 200);
+            this.pnlInprimagailua.Name = "pnlInprimagailua";
             this.pnlInprimagailua.Size = new System.Drawing.Size(360, 80);
+            this.pnlInprimagailua.TabIndex = 9;
             this.pnlInprimagailua.Visible = false;
+
+            // 
+            // lblKoloretakoa
+            // 
             this.lblKoloretakoa.AutoSize = true;
-            this.lblKoloretakoa.Text = "Koloretakoa da?";
             this.lblKoloretakoa.Location = new System.Drawing.Point(0, 0);
-            this.cmbKoloretakoa.Items.AddRange(new object[] { "Bai", "Ez" });
-            this.cmbKoloretakoa.Location = new System.Drawing.Point(4, 25);
-            this.cmbKoloretakoa.Size = new System.Drawing.Size(350, 28);
+            this.lblKoloretakoa.Name = "lblKoloretakoa";
+            this.lblKoloretakoa.Size = new System.Drawing.Size(107, 16);
+            this.lblKoloretakoa.TabIndex = 0;
+            this.lblKoloretakoa.Text = "Koloretakoa da?";
+
+            // 
+            // cmbKoloretakoa
+            // 
             this.cmbKoloretakoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pnlInprimagailua.Controls.AddRange(new System.Windows.Forms.Control[] { this.lblKoloretakoa, this.cmbKoloretakoa });
+            this.cmbKoloretakoa.FormattingEnabled = true;
+            this.cmbKoloretakoa.Items.AddRange(new object[] {
+            "Bai",
+            "Ez"});
+            this.cmbKoloretakoa.Location = new System.Drawing.Point(4, 25);
+            this.cmbKoloretakoa.Name = "cmbKoloretakoa";
+            this.cmbKoloretakoa.Size = new System.Drawing.Size(350, 24);
+            this.cmbKoloretakoa.TabIndex = 1;
 
-            // Resto de campos
+            // 
+            // lblErosteData
+            // 
             this.lblErosteData.AutoSize = true;
-            this.lblErosteData.Text = "Eroste Data:";
             this.lblErosteData.Location = new System.Drawing.Point(30, 340);
-            this.dtpErosteData.Location = new System.Drawing.Point(34, 365);
-            this.dtpErosteData.Size = new System.Drawing.Size(350, 27);
-            this.dtpErosteData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.lblErosteData.Name = "lblErosteData";
+            this.lblErosteData.Size = new System.Drawing.Size(81, 16);
+            this.lblErosteData.TabIndex = 10;
+            this.lblErosteData.Text = "Eroste Data:";
 
-            // Botones (Subidos un poco al quitar el estado)
+            // 
+            // dtpErosteData
+            // 
+            this.dtpErosteData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpErosteData.Location = new System.Drawing.Point(34, 365);
+            this.dtpErosteData.Name = "dtpErosteData";
+            this.dtpErosteData.Size = new System.Drawing.Size(350, 22);
+            this.dtpErosteData.TabIndex = 11;
+
+            // 
+            // btnGorde
+            // 
             this.btnGorde.BackColor = System.Drawing.Color.FromArgb(46, 204, 113);
-            this.btnGorde.Text = "💾 Gorde";
-            this.btnGorde.Location = new System.Drawing.Point(40, 420);
-            this.btnGorde.Size = new System.Drawing.Size(150, 40);
             this.btnGorde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGorde.ForeColor = System.Drawing.Color.White;
+            this.btnGorde.Location = new System.Drawing.Point(40, 420);
+            this.btnGorde.Name = "btnGorde";
+            this.btnGorde.Size = new System.Drawing.Size(150, 40);
+            this.btnGorde.TabIndex = 12;
+            this.btnGorde.Text = "💾 Gorde";
+            this.btnGorde.UseVisualStyleBackColor = false;
             this.btnGorde.Click += new System.EventHandler(this.btnGorde_Click);
 
+            // 
+            // btnEzeztatu
+            // 
             this.btnEzeztatu.BackColor = System.Drawing.Color.FromArgb(231, 76, 60);
-            this.btnEzeztatu.Text = "❌ Ezeztatu";
-            this.btnEzeztatu.Location = new System.Drawing.Point(230, 420);
-            this.btnEzeztatu.Size = new System.Drawing.Size(150, 40);
             this.btnEzeztatu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEzeztatu.ForeColor = System.Drawing.Color.White;
+            this.btnEzeztatu.Location = new System.Drawing.Point(230, 420);
+            this.btnEzeztatu.Name = "btnEzeztatu";
+            this.btnEzeztatu.Size = new System.Drawing.Size(150, 40);
+            this.btnEzeztatu.TabIndex = 13;
+            this.btnEzeztatu.Text = "❌ Ezeztatu";
+            this.btnEzeztatu.UseVisualStyleBackColor = false;
             this.btnEzeztatu.Click += new System.EventHandler(this.btnEzeztatu_Click);
 
-            // Form (Más corto ahora)
+            // 
+            // FGailua
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(420, 490);
+            this.Controls.Add(this.btnEzeztatu);
+            this.Controls.Add(this.btnGorde);
+            this.Controls.Add(this.dtpErosteData);
+            this.Controls.Add(this.lblErosteData);
+            this.Controls.Add(this.pnlInprimagailua);
+            this.Controls.Add(this.pnlOrdenagailua);
+            this.Controls.Add(this.txtGela);
+            this.Controls.Add(this.lblGela);
+            this.Controls.Add(this.txtMarka);
+            this.Controls.Add(this.lblMarka);
+            this.Controls.Add(this.cmbMota);
+            this.Controls.Add(this.lblMota);
+            this.Controls.Add(this.panelHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FGailua";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Controls.AddRange(new System.Windows.Forms.Control[] { this.panelHeader, this.lblMota, this.cmbMota, this.lblMarka, this.txtMarka, this.lblGela, this.txtGela, this.pnlOrdenagailua, this.pnlInprimagailua, this.lblErosteData, this.dtpErosteData, this.btnGorde, this.btnEzeztatu });
-
+            this.Text = "FGailua";
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.pnlOrdenagailua.ResumeLayout(false);
@@ -170,6 +308,7 @@
             this.pnlInprimagailua.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

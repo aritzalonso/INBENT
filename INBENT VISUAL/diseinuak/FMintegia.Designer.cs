@@ -25,6 +25,7 @@
             this.btnEzeztatu = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // panelHeader
             // 
@@ -35,6 +36,7 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(400, 50);
             this.panelHeader.TabIndex = 0;
+
             // 
             // lblTituloa
             // 
@@ -46,6 +48,7 @@
             this.lblTituloa.Size = new System.Drawing.Size(183, 28);
             this.lblTituloa.TabIndex = 0;
             this.lblTituloa.Text = "Mintegiaren Datuak";
+
             // 
             // lblIzena
             // 
@@ -57,6 +60,7 @@
             this.lblIzena.Size = new System.Drawing.Size(147, 23);
             this.lblIzena.TabIndex = 1;
             this.lblIzena.Text = "Mintegiaren Izena:";
+
             // 
             // txtIzena
             // 
@@ -65,6 +69,7 @@
             this.txtIzena.Name = "txtIzena";
             this.txtIzena.Size = new System.Drawing.Size(330, 32);
             this.txtIzena.TabIndex = 2;
+
             // 
             // btnGorde
             // 
@@ -81,6 +86,7 @@
             this.btnGorde.Text = "💾 Gorde";
             this.btnGorde.UseVisualStyleBackColor = false;
             this.btnGorde.Click += new System.EventHandler(this.btnGorde_Click);
+
             // 
             // btnEzeztatu
             // 
@@ -97,6 +103,7 @@
             this.btnEzeztatu.Text = "❌ Ezeztatu";
             this.btnEzeztatu.UseVisualStyleBackColor = false;
             this.btnEzeztatu.Click += new System.EventHandler(this.btnEzeztatu_Click);
+
             // 
             // FMintegia
             // 

@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace INBENT_VISUAL.Entitateak
+﻿namespace INBENT_VISUAL.Entitateak
 {
+    /// <summary>
+    /// Ikastetxeko mintegi edo sail bakoitza irudikatzen duen klasea.
+    /// </summary>
     public class Mintegia
     {
+        #region PROPIETATEAK
         public int IdMintegia { get; set; }
         public string Izena { get; set; }
+        #endregion
 
-        // Constructor
-        public Mintegia(int id, string izena)
-        {
-            this.IdMintegia = id;
-            this.Izena = izena;
-        }
+        #region ERAIKITZAILEA
+        public Mintegia() { }
+        #endregion
     }
 }

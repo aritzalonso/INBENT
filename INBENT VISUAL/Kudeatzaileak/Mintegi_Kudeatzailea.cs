@@ -1,20 +1,27 @@
-﻿using INBENT_VISUAL.Entitateak;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
+using INBENT_VISUAL.Entitateak;
 
 namespace INBENT_VISUAL.Kudeatzaileak
 {
+    /// <summary>
+    /// MINTEGIA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea.
+    /// </summary>
     public class Mintegi_Kudeatzailea
     {
-        // Instanciamos el puente a la BD
+        #region ALDAGAI OROKORRAK
+        // Datu-basearekiko konexioa kudeatzeko objektua
         private DBkonexioa db = new DBkonexioa();
+        #endregion
 
-        // Función para LEER de la Base de Datos (SELECT)
-        public List<Mintegia> MintegiakErakutsi()
+        #region IRAKURRI (READ)
+        /// <summary>
+        /// Datu-basetik mintegi guztiak irakurri eta objektu zerrenda gisa itzultzen ditu.
+        /// </summary>
+        /// <returns>Mintegia objektuen zerrenda (List).</returns>
+        public List<Mintegia> MintegiakErakutsiPOO()
         {
             List<Mintegia> lista = new List<Mintegia>();
             string query = "SELECT id_mintegia, izena FROM MINTEGIA";
@@ -29,10 +36,14 @@ namespace INBENT_VISUAL.Kudeatzaileak
 
                     while (reader.Read())
                     {
-                        int id = reader.GetInt32("id_mintegia");
-                        string izena = reader.GetString("izena");
-                        lista.Add(new Mintegia(id, izena));
+                        // POO: Objektua sortu eta betetzen dugu
+                        Mintegia m = new Mintegia();
+                        m.IdMintegia = reader.GetInt32("id_mintegia");
+                        m.Izena = reader.GetString("izena");
+
+                        lista.Add(m);
                     }
+                    reader.Close();
                     db.Itxi();
                 }
             }
@@ -42,9 +53,15 @@ namespace INBENT_VISUAL.Kudeatzaileak
             }
             return lista;
         }
+        #endregion
 
-        // Función para GUARDAR en la Base de Datos (INSERT)
-        public bool GehituMintegia(string izenaBerria)
+        #region GEHITU (CREATE)
+        /// <summary>
+        /// Mintegi berri bat gordetzen du datu-basean.
+        /// </summary>
+        /// <param name="mintegia">Gordeko den Mintegia objektua.</param>
+        /// <returns>Egia (true) ondo gorde bada, bestela Gezurra (false).</returns>
+        public bool GehituMintegia(Mintegia mintegia)
         {
             string query = "INSERT INTO MINTEGIA (izena) VALUES (@izena)";
 
@@ -54,7 +71,8 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 if (konexioa != null)
                 {
                     MySqlCommand cmd = new MySqlCommand(query, konexioa);
-                    cmd.Parameters.AddWithValue("@izena", izenaBerria);
+                    // Objektuaren propietatea (Izena) erabiltzen dugu
+                    cmd.Parameters.AddWithValue("@izena", mintegia.Izena);
 
                     int lerroak = cmd.ExecuteNonQuery();
                     db.Itxi();
@@ -69,19 +87,24 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 return false;
             }
         }
+        #endregion
+
+        #region EZABATU (DELETE)
+        /// <summary>
+        /// Mintegi bat datu-basetik ezabatzen du bere ID-aren bidez.
+        /// </summary>
+        /// <param name="idMintegia">Ezabatu nahi den mintegiaren identifikadorea.</param>
+        /// <returns>Egia (true) ondo ezabatu bada, bestela Gezurra (false).</returns>
         public bool EzabatuMintegia(int idMintegia)
         {
-            // OJO: Asegúrate de que el nombre de la tabla sea MINTEGIA y la columna id
             string query = "DELETE FROM MINTEGIA WHERE id_mintegia = @id";
 
             try
             {
-                DBkonexioa db = new DBkonexioa();
-                MySql.Data.MySqlClient.MySqlConnection konexioa = db.Ireki();
-
+                MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(query, konexioa);
+                    MySqlCommand cmd = new MySqlCommand(query, konexioa);
                     cmd.Parameters.AddWithValue("@id", idMintegia);
 
                     int errenkadak = cmd.ExecuteNonQuery();
@@ -93,10 +116,12 @@ namespace INBENT_VISUAL.Kudeatzaileak
             }
             catch (Exception ex)
             {
-                // Este mensaje es importante: MySQL no te dejará borrar un Mintegi si hay profesores o equipos dentro de él (por seguridad).
-                System.Windows.Forms.MessageBox.Show("Ezin izan da mintegia ezabatu. Ziurtatu ez dagoela erabiltzailerik edo gailurik mintegi honetara lotuta.\n\nXehetasunak: " + ex.Message, "Segurtasun Blokeoa", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Warning);
+                // SQL Segurtasun kontrola: Ezin da mintegi bat ezabatu erabiltzaileak edo gailuak baditu barnean
+                MessageBox.Show("Ezin izan da mintegia ezabatu. Ziurtatu ez dagoela erabiltzailerik edo gailurik mintegi honetara lotuta.\n\nXehetasunak: " + ex.Message,
+                                "Segurtasun Blokeoa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
         }
+        #endregion
     }
 }

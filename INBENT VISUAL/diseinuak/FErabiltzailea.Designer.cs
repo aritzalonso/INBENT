@@ -31,6 +31,7 @@
             this.btnEzeztatu = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // panelHeader
             // 
@@ -41,6 +42,7 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(400, 50);
             this.panelHeader.TabIndex = 0;
+
             // 
             // lblTituloa
             // 
@@ -52,6 +54,7 @@
             this.lblTituloa.Size = new System.Drawing.Size(227, 28);
             this.lblTituloa.TabIndex = 0;
             this.lblTituloa.Text = "Erabiltzailearen Datuak";
+
             // 
             // lblIzena
             // 
@@ -63,6 +66,7 @@
             this.lblIzena.Size = new System.Drawing.Size(169, 23);
             this.lblIzena.TabIndex = 1;
             this.lblIzena.Text = "Erabiltzailearen Izena:";
+
             // 
             // txtIzena
             // 
@@ -71,6 +75,7 @@
             this.txtIzena.Name = "txtIzena";
             this.txtIzena.Size = new System.Drawing.Size(330, 32);
             this.txtIzena.TabIndex = 2;
+
             // 
             // lblPasahitza
             // 
@@ -82,6 +87,7 @@
             this.lblPasahitza.Size = new System.Drawing.Size(86, 23);
             this.lblPasahitza.TabIndex = 3;
             this.lblPasahitza.Text = "Pasahitza:";
+
             // 
             // txtPasahitza
             // 
@@ -90,7 +96,8 @@
             this.txtPasahitza.Name = "txtPasahitza";
             this.txtPasahitza.Size = new System.Drawing.Size(330, 32);
             this.txtPasahitza.TabIndex = 4;
-            this.txtPasahitza.UseSystemPasswordChar = true; // ¡Esto oculta el texto con asteriscos!
+            this.txtPasahitza.UseSystemPasswordChar = true;
+
             // 
             // lblRola
             // 
@@ -102,10 +109,11 @@
             this.lblRola.Size = new System.Drawing.Size(47, 23);
             this.lblRola.TabIndex = 5;
             this.lblRola.Text = "Rola:";
+
             // 
             // cmbRola
             // 
-            this.cmbRola.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList; // Evita que escriban a mano
+            this.cmbRola.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbRola.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cmbRola.FormattingEnabled = true;
             this.cmbRola.Items.AddRange(new object[] {
@@ -116,6 +124,7 @@
             this.cmbRola.Name = "cmbRola";
             this.cmbRola.Size = new System.Drawing.Size(330, 33);
             this.cmbRola.TabIndex = 6;
+
             // 
             // lblMintegia
             // 
@@ -127,6 +136,7 @@
             this.lblMintegia.Size = new System.Drawing.Size(81, 23);
             this.lblMintegia.TabIndex = 7;
             this.lblMintegia.Text = "Mintegia:";
+
             // 
             // cmbMintegia
             // 
@@ -137,6 +147,7 @@
             this.cmbMintegia.Name = "cmbMintegia";
             this.cmbMintegia.Size = new System.Drawing.Size(330, 33);
             this.cmbMintegia.TabIndex = 8;
+
             // 
             // btnGorde
             // 
@@ -153,6 +164,7 @@
             this.btnGorde.Text = "💾 Gorde";
             this.btnGorde.UseVisualStyleBackColor = false;
             this.btnGorde.Click += new System.EventHandler(this.btnGorde_Click);
+
             // 
             // btnEzeztatu
             // 
@@ -169,6 +181,7 @@
             this.btnEzeztatu.Text = "❌ Ezeztatu";
             this.btnEzeztatu.UseVisualStyleBackColor = false;
             this.btnEzeztatu.Click += new System.EventHandler(this.btnEzeztatu_Click);
+
             // 
             // FErabiltzailea
             // 

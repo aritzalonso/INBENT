@@ -7,6 +7,9 @@ namespace INBENT_VISUAL.diseinuak
 {
     public partial class FErabiltzailea : Form
     {
+        #region PROPIETATEAK (DATUEN ENKAPSULAZIOA)
+        // Propietate hauek leihoaren barruko datuak kanpotik (FNagusia) irakurtzeko aukera ematen dute.
+
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public string Izena
         {
@@ -34,44 +37,63 @@ namespace INBENT_VISUAL.diseinuak
             get { return cmbMintegia.Text; }
             set { cmbMintegia.Text = value; }
         }
+        #endregion
 
-        // CONSTRUCTOR 1: Modo "ALTA" (Ventana vacía)
+        #region ERAIKITZAILEAK (CONSTRUCTORES)
+        /// <summary>
+        /// 1. ERAIKITZAILEA: "ALTA" modua. Leihoa hutsik irekitzen da erabiltzaile berri bat sortzeko.
+        /// </summary>
         public FErabiltzailea()
         {
             InitializeComponent();
             KargatuMintegiakDesplegablera();
         }
 
-        // CONSTRUCTOR 2: Modo "ALDATU" (Recibe los datos y los rellena)
+        /// <summary>
+        /// 2. ERAIKITZAILEA: "ALDATU" modua. Datuak jasotzen ditu eta testu-kutxetan kargatzen ditu.
+        /// </summary>
         public FErabiltzailea(string izena, string pasahitza, string rola, string mintegia)
         {
             InitializeComponent();
             KargatuMintegiakDesplegablera();
 
-            // Rellenamos las cajas con los datos del usuario seleccionado
+            // Leihoaren datuak betetzen ditugu jasotako informazioarekin
             this.Izena = izena;
             this.Pasahitza = pasahitza;
             this.Rola = rola;
             this.Mintegia = mintegia;
         }
+        #endregion
 
+        #region DATUAK KARGATZEA
+        /// <summary>
+        /// Datu-basetik mintegiak irakurri eta ComboBox-ean (desplegablean) kargatzen ditu objektu gisa.
+        /// </summary>
         private void KargatuMintegiakDesplegablera()
         {
             cmbMintegia.Items.Clear();
             Mintegi_Kudeatzailea mintegiMotorra = new Mintegi_Kudeatzailea();
-            var mintegiak = mintegiMotorra.MintegiakErakutsi();
+
+            // POO: Objektuen zerrenda jasotzen dugu
+            var mintegiak = mintegiMotorra.MintegiakErakutsiPOO();
 
             foreach (var m in mintegiak)
             {
                 cmbMintegia.Items.Add(m.Izena);
             }
 
+            // Bat bera ere aukeratuta ez badago, lehenengoa jartzen dugu modu lehenetsian
             if (cmbMintegia.Items.Count > 0 && string.IsNullOrEmpty(this.Mintegia))
             {
                 cmbMintegia.SelectedIndex = 0;
             }
         }
+        #endregion
 
+        #region BOTOIEN EKINTZAK (EVENTOS)
+        /// <summary>
+        /// Gorde botoia: Datuen balidazioa egiten du dena ondo beteta dagoela ziurtatzeko.
+        /// </summary>
         private void btnGorde_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtIzena.Text) ||
@@ -87,10 +109,14 @@ namespace INBENT_VISUAL.diseinuak
             this.Close();
         }
 
+        /// <summary>
+        /// Ezeztatu botoia: Prozesua bertan behera uzten du ezer gorde gabe.
+        /// </summary>
         private void btnEzeztatu_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+        #endregion
     }
 }

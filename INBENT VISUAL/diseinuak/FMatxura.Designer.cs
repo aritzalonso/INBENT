@@ -29,6 +29,7 @@
             this.btnEzeztatu = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
+
             // 
             // panelHeader
             // 
@@ -39,6 +40,7 @@
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(400, 50);
             this.panelHeader.TabIndex = 0;
+
             // 
             // lblTituloa
             // 
@@ -50,6 +52,7 @@
             this.lblTituloa.Size = new System.Drawing.Size(193, 28);
             this.lblTituloa.TabIndex = 0;
             this.lblTituloa.Text = "Matxuraren Datuak";
+
             // 
             // lblGailua
             // 
@@ -61,6 +64,7 @@
             this.lblGailua.Size = new System.Drawing.Size(183, 23);
             this.lblGailua.TabIndex = 1;
             this.lblGailua.Text = "Matxuratutako Gailua:";
+
             // 
             // cmbGailua
             // 
@@ -71,6 +75,7 @@
             this.cmbGailua.Name = "cmbGailua";
             this.cmbGailua.Size = new System.Drawing.Size(330, 33);
             this.cmbGailua.TabIndex = 2;
+
             // 
             // lblData
             // 
@@ -82,6 +87,7 @@
             this.lblData.Size = new System.Drawing.Size(117, 23);
             this.lblData.TabIndex = 3;
             this.lblData.Text = "Matxura Data:";
+
             // 
             // dtpData
             // 
@@ -91,6 +97,7 @@
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(330, 32);
             this.dtpData.TabIndex = 4;
+
             // 
             // lblDeskribapena
             // 
@@ -102,15 +109,17 @@
             this.lblDeskribapena.Size = new System.Drawing.Size(119, 23);
             this.lblDeskribapena.TabIndex = 5;
             this.lblDeskribapena.Text = "Deskribapena:";
+
             // 
             // txtDeskribapena
             // 
             this.txtDeskribapena.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtDeskribapena.Location = new System.Drawing.Point(34, 260);
-            this.txtDeskribapena.Multiline = true; // Permite escribir varias líneas
+            this.txtDeskribapena.Multiline = true;
             this.txtDeskribapena.Name = "txtDeskribapena";
-            this.txtDeskribapena.Size = new System.Drawing.Size(330, 80); // Caja más grande
+            this.txtDeskribapena.Size = new System.Drawing.Size(330, 80);
             this.txtDeskribapena.TabIndex = 6;
+
             // 
             // btnGorde
             // 
@@ -127,6 +136,7 @@
             this.btnGorde.Text = "💾 Gorde";
             this.btnGorde.UseVisualStyleBackColor = false;
             this.btnGorde.Click += new System.EventHandler(this.btnGorde_Click);
+
             // 
             // btnEzeztatu
             // 
@@ -143,6 +153,7 @@
             this.btnEzeztatu.Text = "❌ Ezeztatu";
             this.btnEzeztatu.UseVisualStyleBackColor = false;
             this.btnEzeztatu.Click += new System.EventHandler(this.btnEzeztatu_Click);
+
             // 
             // FMatxura
             // 

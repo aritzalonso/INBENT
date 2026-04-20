@@ -1,42 +1,51 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace INBENT_VISUAL.Kudeatzaileak
 {
+    /// <summary>
+    /// Aplikazioaren hasierako pantailan (Dashboard) erakusten diren 
+    /// datu estatistikoak lortzeko arduraduna.
+    /// </summary>
     public class Estatistikak_kudeatzailea
     {
-        // 1. Contar Dispositivos
+        #region ALDAGAI OROKORRAK
+        // Datu-basearekiko konexioa kudeatzeko objektua (Behin bakarrik sortzen dugu memoria aurrezteko)
+        private DBkonexioa db = new DBkonexioa();
+        #endregion
+
+        #region KOPURUAK LORTZEKO FUNTZIOAK (ESTATISTIKAK)
+
+        /// <summary>
+        /// Datu-basean dauden gailu guztien kopuru totala itzultzen du.
+        /// </summary>
         public int LortuGailuKopurua()
         {
             int kopurua = 0;
             try
             {
-                DBkonexioa db = new DBkonexioa();
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    // La consulta mágica de SQL para contar: COUNT(*)
+                    // ExecuteScalar ezin hobea da zenbaki bakarra (COUNT) lortzeko
                     string query = "SELECT COUNT(*) FROM GAILUA";
                     MySqlCommand cmd = new MySqlCommand(query, konexioa);
                     kopurua = Convert.ToInt32(cmd.ExecuteScalar());
                     db.Itxi();
                 }
             }
-            catch (Exception) { }
+            catch (Exception) { /* Errorea badago, 0 itzuliko du aplikazioa ez apurtzeko */ }
             return kopurua;
         }
 
-        // 2. Contar Usuarios
+        /// <summary>
+        /// Datu-basean erregistratuta dauden erabiltzaileen kopuru totala itzultzen du.
+        /// </summary>
         public int LortuErabiltzaileKopurua()
         {
             int kopurua = 0;
             try
             {
-                DBkonexioa db = new DBkonexioa();
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
@@ -50,14 +59,14 @@ namespace INBENT_VISUAL.Kudeatzaileak
             return kopurua;
         }
 
-        // 3. Contar Averías (Matxurak)
-        // Nota: Asegúrate de que tu tabla se llama MATXURA, si es en plural pon MATXURAK
+        /// <summary>
+        /// Erregistratutako matxura guztien kopuru totala itzultzen du.
+        /// </summary>
         public int LortuMatxuraKopurua()
         {
             int kopurua = 0;
             try
             {
-                DBkonexioa db = new DBkonexioa();
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
@@ -70,5 +79,7 @@ namespace INBENT_VISUAL.Kudeatzaileak
             catch (Exception) { }
             return kopurua;
         }
+
+        #endregion
     }
 }
