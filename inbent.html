@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INBET | Digitalizazioa Azpeitia</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-section { padding: 80px 0; background: #f8f9fa; }
+        #private-zone {
+            display: none;
+            background: #eef2f7;
+            border-radius: 15px;
+            padding: 40px;
+            margin-top: 30px;
+            border: 2px solid #0d6efd;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .lang-btn { cursor: pointer; opacity: 0.6; transition: 0.3s; }
+        .lang-btn.active { font-weight: bold; color: #0d6efd; opacity: 1; }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary">INBET</a>
+        <ul class="navbar-nav ms-auto align-items-center gap-3">
+            <li class="nav-item">
+                <a class="nav-link lang" href="#contacto" data-es="Contacto" data-eu="Kontaktua">Contacto</a>
+            </li>
+            <li id="loginArea">
+                <button class="btn btn-primary btn-sm lang" data-bs-toggle="modal" data-bs-target="#loginModal" data-es="Iniciar Sesión" data-eu="Saioa hasi">
+                    Iniciar Sesión
+                </button>
+            </li>
+            <li class="nav-item">
+                <span onclick="changeLang('es')" id="btn-es" class="lang-btn active">ES</span> | 
+                <span onclick="changeLang('eu')" id="btn-eu" class="lang-btn">EU</span>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<header class="hero-section text-center">
+    <div class="container">
+        <h1 class="fw-bold lang" data-es="Innovación Tecnológica en Azpeitia" data-eu="Berrikuntza Teknologikoa Azpeitian">
+            Innovación Tecnológica en Azpeitia
+        </h1>
+        <p class="lang" data-es="Expertos en digitalización y gestión escolar" data-eu="Digitalizazioan eta eskola kudeaketan adituak">
+            Expertos en digitalización y gestión escolar
+        </p>
+    </div>
+</header>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+            <h5 class="mb-3 lang" data-es="Acceso Clientes" data-eu="Bezeroen sarbidea">Acceso Clientes</h5>
+            <input type="text" id="userInput" class="form-control mb-2" placeholder="Usuario">
+            <input type="password" id="passInput" class="form-control mb-2" placeholder="Contraseña">
+            <button class="btn btn-primary w-100 lang" onclick="checkLogin()" data-es="Entrar" data-eu="Sartu">Entrar</button>
+            <p id="loginError" class="text-danger mt-2 d-none lang" data-es="Datos incorrectos" data-eu="Datu okerrak">Usuario o contraseña incorrectos</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="private-zone">
+    <h2 class="text-center lang" data-es="Panel de Descargas" data-eu="Deskarga Panela">Panel de Descargas</h2>
+    <p class="text-center text-muted lang" data-es="Bienvenido al área técnica" data-eu="Ongi etorri eremu teknikora">Bienvenido al área técnica</p>
+    <div class="row mt-4 g-3">
+        <div class="col-md-4">
+            <div class="card p-3 text-center">
+                <h5>Instalador EXE</h5>
+                <a href="#" class="btn btn-primary">Download</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3 text-center">
+                <h5>Guía PDF</h5>
+                <a href="#" class="btn btn-outline-dark">Abrir</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <iframe width="100%" height="150" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="contacto" class="bg-light py-5">
+    <div class="container" style="max-width:500px;">
+        <h3 class="text-center mb-4 lang" data-es="Contacto" data-eu="Kontaktua">Contacto</h3>
+        <form id="contactForm" class="card p-4 shadow-sm">
+            <input type="text" id="contactFirstName" class="form-control mb-3 lang" placeholder="Nombre" data-es="Nombre" data-eu="Izena" required>
+            <input type="text" id="contactLastName" class="form-control mb-3 lang" placeholder="Apellido" data-es="Apellido" data-eu="Abizena" required>
+            
+            <input type="email" id="contactEmail" class="form-control mb-3" placeholder="Tu Gmail"  data-es="Tu Gmail" data-eu="Zure Gmail-a" required>
+            <textarea id="contactMessage" class="form-control mb-3 lang" placeholder="Mensaje" data-es="Mensaje" data-eu="Mezua" rows="3"></textarea>
+            
+            <button class="btn btn-primary w-100 lang" type="submit" data-es="Enviar" data-eu="Bidali">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer class="text-center py-4 text-muted">INBET | Azpeitia</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+/* --- EMAILJS --- */
+(function(){ emailjs.init("zvjwANct68TRmwWdx"); })();
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    
+    // Captura de los nuevos valores
+    const firstName = document.getElementById("contactFirstName").value;
+    const lastName = document.getElementById("contactLastName").value;
+    const email = document.getElementById("contactEmail").value;
+    const message = document.getElementById("contactMessage").value;
+    
+    emailjs.send("INBENT1234", "template_vb1g6uj", {
+        to_email: email,
+        user_name: firstName + " " + lastName, // Aquí unimos nombre y apellido
+        message: message
+    })
+    .then(() => {
+        alert("📩 Enviado / Bidalia");
+        this.reset();
+    })
+    .catch((err) => {
+        console.error("Error EmailJS:", err);
+        alert("❌ Error al enviar");
+    });
+});
+
+/* --- LOGIN --- */
+document.getElementById("passInput").addEventListener("keyup", (e) => { if(e.key === "Enter") checkLogin(); });
+
+function checkLogin() {
+    const user = document.getElementById("userInput").value;
+    const pass = document.getElementById("passInput").value;
+
+    if(user === "admin" && pass === "1234") {
+        document.getElementById("private-zone").style.display = "block";
+        const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+        if(modal) modal.hide();
+
+        document.getElementById("loginArea").innerHTML = 
+            `<button class="btn btn-outline-danger btn-sm" onclick="location.reload()">Log out</button>`;
+        
+        setTimeout(() => { document.getElementById("private-zone").scrollIntoView(); }, 300);
+    } else {
+        document.getElementById("loginError").classList.remove("d-none");
+    }
+}
+
+/* --- IDIOMA --- */
+function changeLang(lang) {
+    document.querySelectorAll(".lang").forEach(el => {
+        const translation = el.getAttribute("data-" + lang);
+        if(translation) {
+            // Si el elemento es un input o textarea, cambiamos el placeholder
+            if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                el.placeholder = translation;
+            } else {
+                el.innerText = translation;
+            }
+        }
+    });
+
+    document.getElementById("btn-es").classList.toggle("active", lang === "es");
+    document.getElementById("btn-eu").classList.toggle("active", lang === "eu");
+}
+</script>
+
+</body>
+</html>
