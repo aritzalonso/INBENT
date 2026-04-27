@@ -1,0 +1,419 @@
+{
+  "source_base_path": "C:/Users/Aritz/Desktop/INBENT/INBENT VISUAL",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.Erabiltzailea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.Erabiltzailea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak.Erabiltzailea",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Entitateak.Erabiltzailea.yml\" sourcestartlinenumber=\"1\">Sisteman saioa hasi dezaketen pertsonen klasea.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.Gailua.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.Gailua.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak.Gailua",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Entitateak.Gailua.yml\" sourcestartlinenumber=\"1\">Inbentarioko gailu guztien oinarrizko klasea.\nHemen gordetzen dira gailu guztiek dituzten ezaugarri amankomunak.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.Inprimagailua.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.Inprimagailua.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak.Inprimagailua",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Entitateak.Inprimagailua.yml\" sourcestartlinenumber=\"1\">Gailua klasearen azpiklasea.\nInprimagailuen ezaugarri espezifikoak kudeatzen ditu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.Matxura.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.Matxura.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak.Matxura",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Entitateak.Matxura.yml\" sourcestartlinenumber=\"1\">Gailu baten matxura irudikatzen duen entitate klasea.\nDatu-baseko MATXURA taularen ispilua da objektuetara bideratutako programazioan (POO).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.Mintegia.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.Mintegia.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak.Mintegia",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Entitateak.Mintegia.yml\" sourcestartlinenumber=\"1\">Ikastetxeko mintegi edo sail bakoitza irudikatzen duen klasea.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.Ordenagailua.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.Ordenagailua.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak.Ordenagailua",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Entitateak.Ordenagailua.yml\" sourcestartlinenumber=\"1\">Gailua klasearen azpiklasea.\nOrdenagailuen hardware ezaugarri zehatzak gordetzen ditu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Entitateak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Entitateak.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Entitateak",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.yml\" sourcestartlinenumber=\"1\">ERABILTZAILEA taularen datu-baseko eragiketak (CRUD) eta segurtasuna (Login) kudeatzen dituen klasea.\nDatu-basearen arkitektura (Backend) eta interfazearen (Frontend) arteko POO zubi-lana egiten du.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea.yml\" sourcestartlinenumber=\"1\">Aplikazioaren hasierako pantailan (Dashboard) erakusten diren\ndatu estatistikoak lortzeko arduraduna.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea.yml\" sourcestartlinenumber=\"1\">GAILUA, ORDENAGAILUA eta INPRIMAGAILUA taulen eragiketak (CRUD) kudeatzen dituen klasea.\nHerentzia eta Polimorfismoa kudeatzen ditu datu-basearen mailan.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.yml\" sourcestartlinenumber=\"1\">MATXURA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea.\nGailuen matxurak sortu, irakurri eta konpontzeaz arduratzen da,\ngailuen egoera automatikoki eguneratuz transakzio logikoen bidez.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea.yml\" sourcestartlinenumber=\"1\">MINTEGIA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.Kudeatzaileak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.Kudeatzaileak.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.Kudeatzaileak",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FBaja.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FBaja.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FBaja",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FBaja.yml\" sourcestartlinenumber=\"1\">Gailu bati baja ematerakoan zabaltzen den leiho txikia (Formularioa).\nErabiltzaileari baja emateko arrazoia eskatzen dio prozesua amaitu aurretik.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FErabiltzailea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FErabiltzailea.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FErabiltzailea",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FErabiltzailea.yml\" sourcestartlinenumber=\"1\">Erabiltzaile bat (Irakaslea, Mintegi burua, IKT Arduraduna) sortzeko edo aldatzeko\nerabiltzen den leihoa (Formularioa).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FGailua.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FGailua.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FGailua",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FGailua.yml\" sourcestartlinenumber=\"1\">Gailu berri bat (Ordenagailua edo Inprimagailua) sortzeko edo lehendik dagoen baten\ndatuak editatzeko erabiltzen den leihoa (Formularioa).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FHistoriala.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FHistoriala.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FHistoriala",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FHistoriala.yml\" sourcestartlinenumber=\"1\">Hautatutako gailu baten matxuren historia osoa erakusten duen leihoa.\nGainera, gailua 'Bajan' badago, horren arrazoia nabarmentzen du.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FKonponketa.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FKonponketa.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FKonponketa",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FKonponketa.yml\" sourcestartlinenumber=\"1\">Gailu matxuratu bat konpontzerakoan zabaltzen den leihoa (Formularioa).\nTeknikariari konponketa-data eta egindako lanaren azalpena eskatzen dizkio.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FLogin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FLogin.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FLogin",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FLogin.yml\" sourcestartlinenumber=\"1\">Aplikazioaren sarrera-pantaila (Login). Erabiltzaileak identifikatzeko eta\ndagozkion baimen zein mintegiekin pantaila nagusia (FNagusia) irekitzeko ardura du.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FMatxura.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FMatxura.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FMatxura",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FMatxura.yml\" sourcestartlinenumber=\"1\">Gailu baten matxura berria erregistratzeko erabiltzen den leihoa (Formularioa).\nErabiltzaileari arazoaren deskribapena eta data eskatzen dizkio.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FMintegiAldaketa.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FMintegiAldaketa.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FMintegiAldaketa",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FMintegiAldaketa.yml\" sourcestartlinenumber=\"1\">Mintegi bat ezabatzerakoan agertzen den trantsizio-leihoa.\nErabiltzaileari galdetzen dio nora transferitu nahi dituen ezabatuko den\nmintegiko gailu eta erabiltzaileak.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FMintegia.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FMintegia.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FMintegia",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FMintegia.yml\" sourcestartlinenumber=\"1\">Mintegi berri bat sortzeko erabiltzen den leihoa (Formularioa).\nErabiltzaileari mintegiaren izena eskatzen dio.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FNagusia.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FNagusia.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FNagusia",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FNagusia.yml\" sourcestartlinenumber=\"1\">Aplikazioaren pantaila nagusia (Dashboard).\nNabigazioa, datuen bistaratzea (taulak), iragazki aurreratuak eta\nentitate ezberdinen (Gailuak, Matxurak, Erabiltzaileak...) kudeaketa zentralizatzen ditu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FPasahitzaAldatu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FPasahitzaAldatu.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FPasahitzaAldatu",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FPasahitzaAldatu.yml\" sourcestartlinenumber=\"1\">Erabiltzaileari pasahitza modu seguruan aldatzeko aukera ematen dion leihoa.\nPasahitza bi aldiz idaztea eskatzen du akatsak ekiditeko.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.FProfila.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.FProfila.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak.FProfila",
+      "Summary": "<p sourcefile=\"api/INBENT_VISUAL.diseinuak.FProfila.yml\" sourcestartlinenumber=\"1\">Erabiltzailearen profilaren informazioa erakusten duen leihoa.\nHemendik pasahitza aldatzeko aukera ere badu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/INBENT_VISUAL.diseinuak.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/INBENT_VISUAL.diseinuak.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "INBENT_VISUAL.diseinuak",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

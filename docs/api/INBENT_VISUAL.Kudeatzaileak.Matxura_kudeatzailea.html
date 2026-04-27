@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Matxura_kudeatzailea | INBENT </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Matxura_kudeatzailea | INBENT ">
+      
+      <meta name="description" content="MATXURA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea. Gailuen matxurak sortu, irakurri eta konpontzeaz arduratzen da, gailuen egoera automatikoki eguneratuz transakzio logikoen bidez.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/aritzalonso/INBENT/new/master/apiSpec/new?filename=INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea.md&amp;value=---%0Auid%3A%20INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="INBENT">
+            INBENT
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea">
+
+
+
+  <h1 id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea" class="text-break">
+Class Matxura_kudeatzailea  <a class="header-action link-secondary" title="View source" href="https://github.com/aritzalonso/INBENT/blob/master/INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="INBENT_VISUAL.html">INBENT_VISUAL</a>.<a class="xref" href="INBENT_VISUAL.Kudeatzaileak.html">Kudeatzaileak</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>INBENT VISUAL.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>MATXURA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea.
+Gailuen matxurak sortu, irakurri eta konpontzeaz arduratzen da,
+gailuen egoera automatikoki eguneratuz transakzio logikoen bidez.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Matxura_kudeatzailea</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Matxura_kudeatzailea</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_GehituMatxura_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura*"></a>
+
+  <h3 id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_GehituMatxura_INBENT_VISUAL_Entitateak_Matxura_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura(INBENT_VISUAL.Entitateak.Matxura)">
+  GehituMatxura(Matxura)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/aritzalonso/INBENT/blob/master/INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Matxura berri bat erregistratzen du (INSERT) eta aldi berean lotutako gailuaren
+egoera 'matxuratua' izatera pasatzen du (UPDATE).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GehituMatxura(Matxura matxura)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matxura</code> <a class="xref" href="INBENT_VISUAL.Entitateak.Matxura.html">Matxura</a></dt>
+    <dd><p>Datu-basean gordeko den Matxura objektua.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Egia (true) ondo gorde bada, bestela Gezurra (false).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_KonponduMatxura_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura*"></a>
+
+  <h3 id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_KonponduMatxura_INBENT_VISUAL_Entitateak_Matxura_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura(INBENT_VISUAL.Entitateak.Matxura)">
+  KonponduMatxura(Matxura)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/aritzalonso/INBENT/blob/master/INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs/#L175"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Existitzen den matxura bati konponketa-datuak (data eta azalpena) gehitzen dizkio (UPDATE)
+eta gailua berriro 'aktibo' egoeran jartzen du.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool KonponduMatxura(Matxura matxura)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>matxura</code> <a class="xref" href="INBENT_VISUAL.Entitateak.Matxura.html">Matxura</a></dt>
+    <dd><p>Konponketaren datuak dituen Matxura objektua.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Egia (true) ondo eguneratu bada, bestela Gezurra (false).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_LortuGailuarenHistoriala_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala*"></a>
+
+  <h3 id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_LortuGailuarenHistoriala_System_Int32_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala(System.Int32)">
+  LortuGailuarenHistoriala(int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/aritzalonso/INBENT/blob/master/INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gailu zehatz baten matxuren historia osoa (konponduak eta konpondu gabeak) lortzen du,
+dataren arabera ordenatuta (berriena lehenengo).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Matxura&gt; LortuGailuarenHistoriala(int idGailua)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>idGailua</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Historiala ikusi nahi den gailuaren identifikatzailea.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="INBENT_VISUAL.Entitateak.Matxura.html">Matxura</a>&gt;</dt>
+    <dd><p>Gailu horren Matxura objektuen zerrenda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_MatxurakErakutsiPOO_" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO*"></a>
+
+  <h3 id="INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_MatxurakErakutsiPOO" data-uid="INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO">
+  MatxurakErakutsiPOO()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/aritzalonso/INBENT/blob/master/INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Oraindik konpondu gabe dauden matxuren zerrenda lortzen du datu-basetik.
+JOIN bidez gailuaren eta mintegiaren informazioa ere ekartzen du interfazean erakusteko.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Matxura&gt; MatxurakErakutsiPOO()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="INBENT_VISUAL.Entitateak.Matxura.html">Matxura</a>&gt;</dt>
+    <dd><p>Konpondu gabeko Matxura objektuen zerrenda.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/aritzalonso/INBENT/blob/master/INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
