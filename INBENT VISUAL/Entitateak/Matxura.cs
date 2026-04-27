@@ -3,7 +3,8 @@
 namespace INBENT_VISUAL.Entitateak
 {
     /// <summary>
-    /// Gailu batek izan dezakeen matxura edo arazoa adierazten duen klasea.
+    /// Gailu baten matxura irudikatzen duen entitate klasea.
+    /// Datu-baseko MATXURA taularen ispilua da objektuetara bideratutako programazioan (POO).
     /// </summary>
     public class Matxura
     {
@@ -13,17 +14,20 @@ namespace INBENT_VISUAL.Entitateak
         public string Deskribapena { get; set; }
         public int IdGailua { get; set; }
 
-        // Konponketari buruzko datuak (Nulua izan daiteke oraindik konpondu ez bada)
         public DateTime? KonponketaData { get; set; }
         public string KonponketaDeskribapena { get; set; }
 
-        // Laguntza propietatea: Taula bisualetan gailuaren infoa erakusteko (adib: "HP (Gela 101)")
         public string GailuInfo { get; set; }
+        public string MintegiIzena { get; set; }
         #endregion
 
         #region ERAIKITZAILEAK
         public Matxura() { }
 
+        /// <summary>
+        /// Matxura berri bat sortzeko eraikitzailea, datu-basean sartu aurretik 
+        /// oinarrizko informazioa (data, azalpena eta gailuaren ID-a) hasieratzeko.
+        /// </summary>
         public Matxura(int id, DateTime data, string deskribapena, int idGailua)
         {
             this.IdMatxura = id;

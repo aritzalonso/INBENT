@@ -4,11 +4,17 @@ using System.Windows.Forms;
 
 namespace INBENT_VISUAL.diseinuak
 {
+    /// <summary>
+    /// Mintegi berri bat sortzeko erabiltzen den leihoa (Formularioa).
+    /// Erabiltzaileari mintegiaren izena eskatzen dio.
+    /// </summary>
     public partial class FMintegia : Form
     {
         #region PROPIETATEAK (DATUEN ENKAPSULAZIOA)
-        // Kaxan idatzitako testua gordetzen duen propietatea.
-        // Honi esker, FNagusia-k mintegiaren izena irakurri dezake.
+        /// <summary>
+        /// Leihoan idatzitako mintegiaren izena lortzeko edo ezartzeko propietatea, 
+        /// FNagusia-tik zuzenean irakurri ahal izateko.
+        /// </summary>
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string MintegiIzena
@@ -20,7 +26,7 @@ namespace INBENT_VISUAL.diseinuak
 
         #region ERAIKITZAILEA (CONSTRUCTOR)
         /// <summary>
-        /// Mintegia sortzeko leihoa hasieratzen du.
+        /// Mintegiaren leihoa hasieratzen du.
         /// </summary>
         public FMintegia()
         {
@@ -30,25 +36,22 @@ namespace INBENT_VISUAL.diseinuak
 
         #region BOTOIEN EKINTZAK (EVENTOS)
         /// <summary>
-        /// Gorde botoia: Mintegiaren izena hutsik ez dagoela ziurtatzen du.
+        /// 'Gorde' botoiaren gertaera (Click). 
+        /// Mintegiaren izena hutsik ez dagoela balidatzen du. Zuzen badago, 
+        /// DialogResult.OK seinalea bidaltzen du aplikazio nagusira.
         /// </summary>
         private void btnGorde_Click(object sender, EventArgs e)
         {
-            // Nahitaezkoa da mintegiari izen bat jartzea
             if (string.IsNullOrWhiteSpace(txtIzena.Text))
             {
                 MessageBox.Show("Mesedez, idatzi mintegiaren izena.", "Datu falta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Dena ondo badago, onartu eta itxi
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        /// <summary>
-        /// Ezeztatu botoia: Prozesua bertan behera uzten du ezer gorde gabe.
-        /// </summary>
         private void btnEzeztatu_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

@@ -88,26 +88,44 @@ namespace INBENT_VISUAL.Kudeatzaileak
             }
         }
         #endregion
-
-        #region EZABATU (DELETE)
+        #region EZABATU ETA MUGITU (DELETE & REASSIGN)
         /// <summary>
-        /// Mintegi bat datu-basetik ezabatzen du bere ID-aren bidez.
+        /// Mintegi bat ezabatzen du. Ezabatu aurretik gailuak/erabiltzaileak beste mintegi batera mugitzen ditu, 
+        /// edo "Esleitu gabe" (NULL) uzten ditu idBerria 0 bada.
         /// </summary>
-        /// <param name="idMintegia">Ezabatu nahi den mintegiaren identifikadorea.</param>
-        /// <returns>Egia (true) ondo ezabatu bada, bestela Gezurra (false).</returns>
-        public bool EzabatuMintegia(int idMintegia)
+        /// <param name="idZaharra">Ezabatu nahi den mintegiaren ID-a.</param>
+        /// <param name="idBerria">Mintegi berriaren ID-a (edo 0 "esleitu gabe" uzteko).</param>
+        /// <returns>Egia (true) prozesu osoa ondo burutu bada.</returns>
+        public bool EzabatuEtaMugitu(int idZaharra, int idBerria)
         {
-            string query = "DELETE FROM MINTEGIA WHERE id_mintegia = @id";
-
             try
             {
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    MySqlCommand cmd = new MySqlCommand(query, konexioa);
-                    cmd.Parameters.AddWithValue("@id", idMintegia);
+                    // idBerria 0 bada datu-basearentzat NULL izango da, bestela ID arrunta
+                    object balioBerria = idBerria == 0 ? (object)DBNull.Value : idBerria;
 
-                    int errenkadak = cmd.ExecuteNonQuery();
+                    // 1. Gailuak mintegi berrira pasa (edo NULL utzi)
+                    string queryGailuak = "UPDATE GAILUA SET id_mintegia = @idBerria WHERE id_mintegia = @idZaharra";
+                    MySqlCommand cmdGailuak = new MySqlCommand(queryGailuak, konexioa);
+                    cmdGailuak.Parameters.AddWithValue("@idBerria", balioBerria);
+                    cmdGailuak.Parameters.AddWithValue("@idZaharra", idZaharra);
+                    cmdGailuak.ExecuteNonQuery();
+
+                    // 2. Erabiltzaileak mintegi berrira pasa (edo NULL utzi)
+                    string queryErabiltzaileak = "UPDATE ERABILTZAILEA SET id_mintegia = @idBerria WHERE id_mintegia = @idZaharra";
+                    MySqlCommand cmdErabiltzaileak = new MySqlCommand(queryErabiltzaileak, konexioa);
+                    cmdErabiltzaileak.Parameters.AddWithValue("@idBerria", balioBerria);
+                    cmdErabiltzaileak.Parameters.AddWithValue("@idZaharra", idZaharra);
+                    cmdErabiltzaileak.ExecuteNonQuery();
+
+                    // 3. Mintegi zaharra ezabatu
+                    string queryMintegia = "DELETE FROM MINTEGIA WHERE id_mintegia = @idZaharra";
+                    MySqlCommand cmdMintegia = new MySqlCommand(queryMintegia, konexioa);
+                    cmdMintegia.Parameters.AddWithValue("@idZaharra", idZaharra);
+
+                    int errenkadak = cmdMintegia.ExecuteNonQuery();
                     db.Itxi();
 
                     return errenkadak > 0;
@@ -116,9 +134,54 @@ namespace INBENT_VISUAL.Kudeatzaileak
             }
             catch (Exception ex)
             {
-                // SQL Segurtasun kontrola: Ezin da mintegi bat ezabatu erabiltzaileak edo gailuak baditu barnean
-                MessageBox.Show("Ezin izan da mintegia ezabatu. Ziurtatu ez dagoela erabiltzailerik edo gailurik mintegi honetara lotuta.\n\nXehetasunak: " + ex.Message,
-                                "Segurtasun Blokeoa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Errorea mintegiaren migrazioan: " + ex.Message, "Errorea", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+        #endregion
+        #region EZABATU (DELETE)
+        /// <summary>
+        /// Mintegi bat datu-basetik ezabatzen du bere ID-aren bidez.
+        /// Funtzio honek mintegi horretako gailuak ETA erabiltzaileak "umezurtz" uzten ditu (id_mintegia = NULL) 
+        /// ezabaketa egin aurretik, datu-baseko erregistroak ez apurtzeko.
+        /// </summary>
+        /// <param name="idMintegia">Ezabatu nahi den mintegiaren identifikadorea.</param>
+        /// <returns>Egia (true) ondo ezabatu bada, bestela Gezurra (false).</returns>
+        public bool EzabatuMintegia(int idMintegia)
+        {
+            try
+            {
+                MySqlConnection konexioa = db.Ireki();
+                if (konexioa != null)
+                {
+                    // 1. URRATSA: Mintegi honetako gailuak "Esleitu gabe" utzi (id_mintegia = NULL)
+                    string queryGailuak = "UPDATE GAILUA SET id_mintegia = NULL WHERE id_mintegia = @id";
+                    MySqlCommand cmdGailuak = new MySqlCommand(queryGailuak, konexioa);
+                    cmdGailuak.Parameters.AddWithValue("@id", idMintegia);
+                    cmdGailuak.ExecuteNonQuery(); // Gailuak askatu ditugu
+
+                    // 2. URRATSA: Mintegi honetako erabiltzaileak ere "Esleitu gabe" utzi (id_mintegia = NULL)
+                    string queryErabiltzaileak = "UPDATE ERABILTZAILEA SET id_mintegia = NULL WHERE id_mintegia = @id";
+                    MySqlCommand cmdErabiltzaileak = new MySqlCommand(queryErabiltzaileak, konexioa);
+                    cmdErabiltzaileak.Parameters.AddWithValue("@id", idMintegia);
+                    cmdErabiltzaileak.ExecuteNonQuery(); // Erabiltzaileak askatu ditugu
+
+                    // 3. URRATSA: Orain bai, mintegia arazorik gabe ezabatu dezakegu
+                    string queryMintegia = "DELETE FROM MINTEGIA WHERE id_mintegia = @id";
+                    MySqlCommand cmdMintegia = new MySqlCommand(queryMintegia, konexioa);
+                    cmdMintegia.Parameters.AddWithValue("@id", idMintegia);
+
+                    int errenkadak = cmdMintegia.ExecuteNonQuery();
+                    db.Itxi();
+
+                    return errenkadak > 0;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ustekabeko errorea mintegia ezabatzean.\n\nXehetasunak: " + ex.Message,
+                                "Errorea", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }

@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: INBENT_VISUAL.Kudeatzaileak
+  commentId: N:INBENT_VISUAL.Kudeatzaileak
+  id: INBENT_VISUAL.Kudeatzaileak
+  children:
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  - INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea
+  - INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea
+  - INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  - INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea
+  langs:
+  - csharp
+  - vb
+  name: INBENT_VISUAL.Kudeatzaileak
+  nameWithType: INBENT_VISUAL.Kudeatzaileak
+  fullName: INBENT_VISUAL.Kudeatzaileak
+  type: Namespace
+  assemblies:
+  - INBENT VISUAL
+references:
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html
+  name: Erabiltzaile_kudeaketa
+  nameWithType: Erabiltzaile_kudeaketa
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+- uid: INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea.html
+  name: Estatistikak_kudeatzailea
+  nameWithType: Estatistikak_kudeatzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea
+- uid: INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea.html
+  name: Gailu_kudeatzailea
+  nameWithType: Gailu_kudeatzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.html
+  name: Matxura_kudeatzailea
+  nameWithType: Matxura_kudeatzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+- uid: INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea.html
+  name: Mintegi_Kudeatzailea
+  nameWithType: Mintegi_Kudeatzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea

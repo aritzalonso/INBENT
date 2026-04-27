@@ -4,11 +4,17 @@ using System.Windows.Forms;
 
 namespace INBENT_VISUAL.diseinuak
 {
+    /// <summary>
+    /// Gailu bati baja ematerakoan zabaltzen den leiho txikia (Formularioa).
+    /// Erabiltzaileari baja emateko arrazoia eskatzen dio prozesua amaitu aurretik.
+    /// </summary>
     public partial class FBaja : Form
     {
         #region PROPIETATEAK (POO)
-        // Informatikariak idatzitako testua gordeko duen propietatea.
-        // Honi esker, FNagusia-k testu hau irakurri dezake objektu gisa.
+        /// <summary>
+        /// Erabiltzaileak testu-kutxan idatzitako baja-arrazoia itzultzen du.
+        /// Honi esker, FNagusia-k testu hau irakurri dezake leihoa itxi ondoren.
+        /// </summary>
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public string Arrazoia
@@ -26,8 +32,9 @@ namespace INBENT_VISUAL.diseinuak
 
         #region BOTOIEN EKINTZAK (EVENTOS)
         /// <summary>
-        /// Gorde botoia sakatzean exekutatzen da. 
-        /// Testu-kutxa hutsik ez dagoela ziurtatzen du.
+        /// 'Gorde' botoiaren gertaera (Click). 
+        /// Testu-kutxa hutsik ez dagoela balidatzen du. Dena zuzen badago, 
+        /// DialogResult.OK seinalea bidali eta leihoa ixten du.
         /// </summary>
         private void btnGorde_Click(object sender, EventArgs e)
         {
@@ -44,8 +51,8 @@ namespace INBENT_VISUAL.diseinuak
         }
 
         /// <summary>
-        /// Ezeztatu botoia sakatzean exekutatzen da.
-        /// Prozesua bertan behera utzi eta leihoa ixten du.
+        /// 'Ezeztatu' botoiaren gertaera (Click).
+        /// Prozesua bertan behera uzten du (DialogResult.Cancel) daturik gorde gabe.
         /// </summary>
         private void btnEzeztatu_Click(object sender, EventArgs e)
         {

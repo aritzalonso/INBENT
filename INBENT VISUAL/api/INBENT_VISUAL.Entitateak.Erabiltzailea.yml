@@ -1,0 +1,658 @@
+### YamlMime:ManagedReference
+items:
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea
+  commentId: T:INBENT_VISUAL.Entitateak.Erabiltzailea
+  id: Erabiltzailea
+  parent: INBENT_VISUAL.Entitateak
+  children:
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor(System.Int32,System.String,System.String,System.Int32,System.Int32)
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.Izena
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza
+  - INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena
+  langs:
+  - csharp
+  - vb
+  name: Erabiltzailea
+  nameWithType: Erabiltzailea
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea
+  type: Class
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: Erabiltzailea
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 5
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  summary: Sisteman saioa hasi dezaketen pertsonen klasea.
+  example: []
+  syntax:
+    content: public class Erabiltzailea
+    content.vb: Public Class Erabiltzailea
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea
+  id: IdErabiltzailea
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: IdErabiltzailea
+  nameWithType: Erabiltzailea.IdErabiltzailea
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: IdErabiltzailea
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 9
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public int IdErabiltzailea { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdErabiltzailea As Integer
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.Izena
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.Izena
+  id: Izena
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: Izena
+  nameWithType: Erabiltzailea.Izena
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Izena
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: Izena
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 10
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public string Izena { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Izena As String
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.Izena*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza
+  id: Pasahitza
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: Pasahitza
+  nameWithType: Erabiltzailea.Pasahitza
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: Pasahitza
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 11
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public string Pasahitza { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Pasahitza As String
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola
+  id: IdRola
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: IdRola
+  nameWithType: Erabiltzailea.IdRola
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: IdRola
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 12
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public int IdRola { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdRola As Integer
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia
+  id: IdMintegia
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: IdMintegia
+  nameWithType: Erabiltzailea.IdMintegia
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: IdMintegia
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 13
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public int IdMintegia { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdMintegia As Integer
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena
+  id: RolIzena
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: RolIzena
+  nameWithType: Erabiltzailea.RolIzena
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: RolIzena
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 16
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public string RolIzena { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RolIzena As String
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena
+  commentId: P:INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena
+  id: MintegiIzena
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: MintegiIzena
+  nameWithType: Erabiltzailea.MintegiIzena
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena
+  type: Property
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: MintegiIzena
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 17
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  syntax:
+    content: public string MintegiIzena { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MintegiIzena As String
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena*
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor(System.Int32,System.String,System.String,System.Int32,System.Int32)
+  commentId: M:INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor(System.Int32,System.String,System.String,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.String,System.String,System.Int32,System.Int32)'
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: Erabiltzailea(int, string, string, int, int)
+  nameWithType: Erabiltzailea.Erabiltzailea(int, string, string, int, int)
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Erabiltzailea(int, string, string, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: .ctor
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 24
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  summary: Eraikitzaile osoa (Datu guztiak jaso eta objektua sortzeko).
+  example: []
+  syntax:
+    content: public Erabiltzailea(int id, string izena, string pasahitza, int idRola, int idMintegia)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: izena
+      type: System.String
+    - id: pasahitza
+      type: System.String
+    - id: idRola
+      type: System.Int32
+    - id: idMintegia
+      type: System.Int32
+    content.vb: Public Sub New(id As Integer, izena As String, pasahitza As String, idRola As Integer, idMintegia As Integer)
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor*
+  nameWithType.vb: Erabiltzailea.New(Integer, String, String, Integer, Integer)
+  fullName.vb: INBENT_VISUAL.Entitateak.Erabiltzailea.New(Integer, String, String, Integer, Integer)
+  name.vb: New(Integer, String, String, Integer, Integer)
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor
+  commentId: M:INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor
+  id: '#ctor'
+  parent: INBENT_VISUAL.Entitateak.Erabiltzailea
+  langs:
+  - csharp
+  - vb
+  name: Erabiltzailea()
+  nameWithType: Erabiltzailea.Erabiltzailea()
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Erabiltzailea()
+  type: Constructor
+  source:
+    remote:
+      path: INBENT VISUAL/Entitateak/Erabiltzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: .ctor
+    path: Entitateak/Erabiltzailea.cs
+    startLine: 36
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Entitateak
+  summary: Eraikitzaile hutsa (Oso erabilgarria objektua sortu eta gero datuak banaka sartzeko).
+  example: []
+  syntax:
+    content: public Erabiltzailea()
+    content.vb: Public Sub New()
+  overload: INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor*
+  nameWithType.vb: Erabiltzailea.New()
+  fullName.vb: INBENT_VISUAL.Entitateak.Erabiltzailea.New()
+  name.vb: New()
+references:
+- uid: INBENT_VISUAL.Entitateak
+  commentId: N:INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.html
+  name: INBENT_VISUAL.Entitateak
+  nameWithType: INBENT_VISUAL.Entitateak
+  fullName: INBENT_VISUAL.Entitateak
+  spec.csharp:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+  spec.vb:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_IdErabiltzailea
+  name: IdErabiltzailea
+  nameWithType: Erabiltzailea.IdErabiltzailea
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.IdErabiltzailea
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.Izena*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.Izena
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_Izena
+  name: Izena
+  nameWithType: Erabiltzailea.Izena
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Izena
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_Pasahitza
+  name: Pasahitza
+  nameWithType: Erabiltzailea.Pasahitza
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Pasahitza
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_IdRola
+  name: IdRola
+  nameWithType: Erabiltzailea.IdRola
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.IdRola
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_IdMintegia
+  name: IdMintegia
+  nameWithType: Erabiltzailea.IdMintegia
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.IdMintegia
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_RolIzena
+  name: RolIzena
+  nameWithType: Erabiltzailea.RolIzena
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.RolIzena
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea_MintegiIzena
+  name: MintegiIzena
+  nameWithType: Erabiltzailea.MintegiIzena
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.MintegiIzena
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor*
+  commentId: Overload:INBENT_VISUAL.Entitateak.Erabiltzailea.#ctor
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html#INBENT_VISUAL_Entitateak_Erabiltzailea__ctor_System_Int32_System_String_System_String_System_Int32_System_Int32_
+  name: Erabiltzailea
+  nameWithType: Erabiltzailea.Erabiltzailea
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea.Erabiltzailea
+  nameWithType.vb: Erabiltzailea.New
+  fullName.vb: INBENT_VISUAL.Entitateak.Erabiltzailea.New
+  name.vb: New

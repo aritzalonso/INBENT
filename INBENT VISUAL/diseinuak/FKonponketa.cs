@@ -4,6 +4,10 @@ using System.Windows.Forms;
 
 namespace INBENT_VISUAL.diseinuak
 {
+    /// <summary>
+    /// Gailu matxuratu bat konpontzerakoan zabaltzen den leihoa (Formularioa).
+    /// Teknikariari konponketa-data eta egindako lanaren azalpena eskatzen dizkio.
+    /// </summary>
     public partial class FKonponketa : Form
     {
         #region PROPIETATEAK (DATUEN ENKAPSULAZIOA)
@@ -33,7 +37,9 @@ namespace INBENT_VISUAL.diseinuak
 
         #region BOTOIEN EKINTZAK (EVENTOS)
         /// <summary>
-        /// Gorde botoia: Teknikariak konponketaren azalpena idatzi duela ziurtatzen du (balidazioa).
+        /// 'Gorde' botoiaren gertaera (Click). 
+        /// Teknikariak konponketaren azalpena idatzi duela ziurtatzen du (balidazioa).
+        /// Dena ondo badago, DialogResult.OK seinalea bidaltzen du datu-basean eguneraketa egiteko.
         /// </summary>
         private void btnGorde_Click(object sender, EventArgs e)
         {
@@ -50,7 +56,8 @@ namespace INBENT_VISUAL.diseinuak
         }
 
         /// <summary>
-        /// Ezeztatu botoia: Prozesua bertan behera uzten du ezer gorde gabe.
+        /// 'Ezeztatu' botoiaren gertaera (Click).
+        /// Prozesua bertan behera uzten du (DialogResult.Cancel) daturik gorde gabe.
         /// </summary>
         private void btnEzeztatu_Click(object sender, EventArgs e)
         {

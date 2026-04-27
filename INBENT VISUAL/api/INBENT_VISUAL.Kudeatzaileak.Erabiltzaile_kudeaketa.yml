@@ -1,0 +1,867 @@
+### YamlMime:ManagedReference
+items:
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  id: Erabiltzaile_kudeaketa
+  parent: INBENT_VISUAL.Kudeatzaileak
+  children:
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza(System.String,System.String)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin(System.String,System.String)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea(System.Int32)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia(System.String)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(System.String,System.String)
+  - INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Erabiltzaile_kudeaketa
+  nameWithType: Erabiltzaile_kudeaketa
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  type: Class
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: Erabiltzaile_kudeaketa
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 12
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: >-
+    ERABILTZAILEA taularen datu-baseko eragiketak (CRUD) eta segurtasuna (Login) kudeatzen dituen klasea.
+
+    Datu-basearen arkitektura (Backend) eta interfazearen (Frontend) arteko POO zubi-lana egiten du.
+  example: []
+  syntax:
+    content: public class Erabiltzaile_kudeaketa
+    content.vb: Public Class Erabiltzaile_kudeaketa
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO
+  id: ErabiltzaileakErakutsiPOO
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: ErabiltzaileakErakutsiPOO()
+  nameWithType: Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO()
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO()
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: ErabiltzaileakErakutsiPOO
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 23
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Datu-basetik erabiltzaile guztiak irakurri eta objektu zerrenda gisa itzultzen ditu (JOIN bidez rol eta mintegi izenak lortuz).
+  example: []
+  syntax:
+    content: public List<Erabiltzailea> ErabiltzaileakErakutsiPOO()
+    return:
+      type: System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Erabiltzailea}
+      description: Erabiltzailea objektuen zerrenda (List).
+    content.vb: Public Function ErabiltzaileakErakutsiPOO() As List(Of Erabiltzailea)
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO*
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka(System.Int32,System.Int32)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka(System.Int32,System.Int32)
+  id: MintegiakBuruaDauka(System.Int32,System.Int32)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: MintegiakBuruaDauka(int, int)
+  nameWithType: Erabiltzaile_kudeaketa.MintegiakBuruaDauka(int, int)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka(int, int)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: MintegiakBuruaDauka
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 72
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Egiaztatzen du ea mintegi batek jada "Mintegi burua" rolarekin erabiltzaile bat duen (Backend ID bidezko balidazioa).
+  example: []
+  syntax:
+    content: public bool MintegiakBuruaDauka(int idMintegi, int saihestuIdErabiltzailea = -1)
+    parameters:
+    - id: idMintegi
+      type: System.Int32
+      description: Mintegiaren datu-baseko ID-a.
+    - id: saihestuIdErabiltzailea
+      type: System.Int32
+      description: Aldaketetan, erabiltzailea bera ez kontatzeko ID-a (lehenetsita -1).
+    return:
+      type: System.Boolean
+      description: Egia (true) jada burua existitzen bada.
+    content.vb: Public Function MintegiakBuruaDauka(idMintegi As Integer, saihestuIdErabiltzailea As Integer = -1) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka*
+  nameWithType.vb: Erabiltzaile_kudeaketa.MintegiakBuruaDauka(Integer, Integer)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka(Integer, Integer)
+  name.vb: MintegiakBuruaDauka(Integer, Integer)
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(System.String,System.String)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(System.String,System.String)
+  id: MintegiakBaduBuruaIzenekin(System.String,System.String)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: MintegiakBaduBuruaIzenekin(string, string)
+  nameWithType: Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(string, string)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(string, string)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: MintegiakBaduBuruaIzenekin
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 107
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Interfazearentzako balidazioa (Frontend). Izenak jasota egiaztatzen du ea mintegiak baduen buru bat jada.
+  example: []
+  syntax:
+    content: public bool MintegiakBaduBuruaIzenekin(string mintegiIzena, string jatorrizkoErabiltzaileIzena)
+    parameters:
+    - id: mintegiIzena
+      type: System.String
+      description: Aukeratutako mintegiaren izena.
+    - id: jatorrizkoErabiltzaileIzena
+      type: System.String
+      description: Editatzen ari den erabiltzailearen jatorrizko izena (bere burua ez kontatzeko).
+    return:
+      type: System.Boolean
+      description: Egia (true) mintegiak jada burua badu.
+    content.vb: Public Function MintegiakBaduBuruaIzenekin(mintegiIzena As String, jatorrizkoErabiltzaileIzena As String) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin*
+  nameWithType.vb: Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(String, String)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin(String, String)
+  name.vb: MintegiakBaduBuruaIzenekin(String, String)
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  id: GehituErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: GehituErabiltzailea(Erabiltzailea)
+  nameWithType: Erabiltzaile_kudeaketa.GehituErabiltzailea(Erabiltzailea)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: GehituErabiltzailea
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 145
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Datu-basean erabiltzaile berri bat sortzen du. Aurretik rol eta mintegi bikoiztuen balidazioak egiten ditu.
+  example: []
+  syntax:
+    content: public bool GehituErabiltzailea(Erabiltzailea erabiltzailea)
+    parameters:
+    - id: erabiltzailea
+      type: INBENT_VISUAL.Entitateak.Erabiltzailea
+      description: Gordeko den Erabiltzailea objektua.
+    return:
+      type: System.Boolean
+      description: Egia (true) ondo gorde bada.
+    content.vb: Public Function GehituErabiltzailea(erabiltzailea As Erabiltzailea) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea*
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  id: AldatuErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: AldatuErabiltzailea(Erabiltzailea)
+  nameWithType: Erabiltzaile_kudeaketa.AldatuErabiltzailea(Erabiltzailea)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea(INBENT_VISUAL.Entitateak.Erabiltzailea)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: AldatuErabiltzailea
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 209
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Existitzen den erabiltzaile baten datuak eguneratzen ditu (UPDATE).
+  example: []
+  syntax:
+    content: public bool AldatuErabiltzailea(Erabiltzailea erabiltzailea)
+    parameters:
+    - id: erabiltzailea
+      type: INBENT_VISUAL.Entitateak.Erabiltzailea
+      description: Aldatuko den Erabiltzailea objektua.
+    return:
+      type: System.Boolean
+      description: Egia (true) eguneraketa arrakastatsua izan bada.
+    content.vb: Public Function AldatuErabiltzailea(erabiltzailea As Erabiltzailea) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea*
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea(System.Int32)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea(System.Int32)
+  id: EzabatuErabiltzailea(System.Int32)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: EzabatuErabiltzailea(int)
+  nameWithType: Erabiltzaile_kudeaketa.EzabatuErabiltzailea(int)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea(int)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: EzabatuErabiltzailea
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 276
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Erabiltzaile bat datu-basetik ezabatzen du bere ID-aren bidez.
+  example: []
+  syntax:
+    content: public bool EzabatuErabiltzailea(int id_erabiltzailea)
+    parameters:
+    - id: id_erabiltzailea
+      type: System.Int32
+      description: Ezabatu nahi den erabiltzailearen azaleratzailea.
+    return:
+      type: System.Boolean
+      description: Egia (true) ondo ezabatu bada.
+    content.vb: Public Function EzabatuErabiltzailea(id_erabiltzailea As Integer) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea*
+  nameWithType.vb: Erabiltzaile_kudeaketa.EzabatuErabiltzailea(Integer)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea(Integer)
+  name.vb: EzabatuErabiltzailea(Integer)
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin(System.String,System.String)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin(System.String,System.String)
+  id: EgiaztatuLogin(System.String,System.String)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: EgiaztatuLogin(string, string)
+  nameWithType: Erabiltzaile_kudeaketa.EgiaztatuLogin(string, string)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin(string, string)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: EgiaztatuLogin
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 309
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Erabiltzailearen kredentzialak (Izena eta Pasahitza) egiaztatzen ditu.
+  example: []
+  syntax:
+    content: public string EgiaztatuLogin(string izena, string pasahitza)
+    parameters:
+    - id: izena
+      type: System.String
+      description: Erabiltzailearen izena.
+    - id: pasahitza
+      type: System.String
+      description: Sartutako pasahitza.
+    return:
+      type: System.String
+      description: Zuzena bada, rolaren izena itzultzen du. Bestela null.
+    content.vb: Public Function EgiaztatuLogin(izena As String, pasahitza As String) As String
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin*
+  nameWithType.vb: Erabiltzaile_kudeaketa.EgiaztatuLogin(String, String)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin(String, String)
+  name.vb: EgiaztatuLogin(String, String)
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza(System.String,System.String)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza(System.String,System.String)
+  id: AldatuPasahitza(System.String,System.String)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: AldatuPasahitza(string, string)
+  nameWithType: Erabiltzaile_kudeaketa.AldatuPasahitza(string, string)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza(string, string)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: AldatuPasahitza
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 341
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Erabiltzaile jakin baten pasahitza aldatzen du datu-basean.
+  example: []
+  syntax:
+    content: public bool AldatuPasahitza(string izena, string pasahitzaBerria)
+    parameters:
+    - id: izena
+      type: System.String
+      description: Pasahitza aldatu nahi duen erabiltzailearen izena.
+    - id: pasahitzaBerria
+      type: System.String
+      description: Ezarri nahi den pasahitz berria.
+    return:
+      type: System.Boolean
+      description: Egia (true) ondo eguneratu bada.
+    content.vb: Public Function AldatuPasahitza(izena As String, pasahitzaBerria As String) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza*
+  nameWithType.vb: Erabiltzaile_kudeaketa.AldatuPasahitza(String, String)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza(String, String)
+  name.vb: AldatuPasahitza(String, String)
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia(System.String)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia(System.String)
+  id: LortuMintegia(System.String)
+  parent: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+  langs:
+  - csharp
+  - vb
+  name: LortuMintegia(string)
+  nameWithType: Erabiltzaile_kudeaketa.LortuMintegia(string)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia(string)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: LortuMintegia
+    path: Kudeatzaileak/Erabiltzaile_kudeaketa.cs
+    startLine: 373
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: Erabiltzaile baten izena emanda, zein mintegikoa den itzultzen du.
+  example: []
+  syntax:
+    content: public string LortuMintegia(string izena)
+    parameters:
+    - id: izena
+      type: System.String
+      description: Erabiltzailearen izena.
+    return:
+      type: System.String
+      description: Mintegiaren izena.
+    content.vb: Public Function LortuMintegia(izena As String) As String
+  overload: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia*
+  nameWithType.vb: Erabiltzaile_kudeaketa.LortuMintegia(String)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia(String)
+  name.vb: LortuMintegia(String)
+references:
+- uid: INBENT_VISUAL.Kudeatzaileak
+  commentId: N:INBENT_VISUAL.Kudeatzaileak
+  href: INBENT_VISUAL.html
+  name: INBENT_VISUAL.Kudeatzaileak
+  nameWithType: INBENT_VISUAL.Kudeatzaileak
+  fullName: INBENT_VISUAL.Kudeatzaileak
+  spec.csharp:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Kudeatzaileak
+    name: Kudeatzaileak
+    href: INBENT_VISUAL.Kudeatzaileak.html
+  spec.vb:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Kudeatzaileak
+    name: Kudeatzaileak
+    href: INBENT_VISUAL.Kudeatzaileak.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_ErabiltzaileakErakutsiPOO
+  name: ErabiltzaileakErakutsiPOO
+  nameWithType: Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.ErabiltzaileakErakutsiPOO
+- uid: System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Erabiltzailea}
+  commentId: T:System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Erabiltzailea}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Erabiltzailea>
+  nameWithType: List<Erabiltzailea>
+  fullName: System.Collections.Generic.List<INBENT_VISUAL.Entitateak.Erabiltzailea>
+  nameWithType.vb: List(Of Erabiltzailea)
+  fullName.vb: System.Collections.Generic.List(Of INBENT_VISUAL.Entitateak.Erabiltzailea)
+  name.vb: List(Of Erabiltzailea)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: INBENT_VISUAL.Entitateak.Erabiltzailea
+    name: Erabiltzailea
+    href: INBENT_VISUAL.Entitateak.Erabiltzailea.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: INBENT_VISUAL.Entitateak.Erabiltzailea
+    name: Erabiltzailea
+    href: INBENT_VISUAL.Entitateak.Erabiltzailea.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_MintegiakBuruaDauka_System_Int32_System_Int32_
+  name: MintegiakBuruaDauka
+  nameWithType: Erabiltzaile_kudeaketa.MintegiakBuruaDauka
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBuruaDauka
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_MintegiakBaduBuruaIzenekin_System_String_System_String_
+  name: MintegiakBaduBuruaIzenekin
+  nameWithType: Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.MintegiakBaduBuruaIzenekin
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_GehituErabiltzailea_INBENT_VISUAL_Entitateak_Erabiltzailea_
+  name: GehituErabiltzailea
+  nameWithType: Erabiltzaile_kudeaketa.GehituErabiltzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.GehituErabiltzailea
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea
+  commentId: T:INBENT_VISUAL.Entitateak.Erabiltzailea
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html
+  name: Erabiltzailea
+  nameWithType: Erabiltzailea
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea
+- uid: INBENT_VISUAL.Entitateak
+  commentId: N:INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.html
+  name: INBENT_VISUAL.Entitateak
+  nameWithType: INBENT_VISUAL.Entitateak
+  fullName: INBENT_VISUAL.Entitateak
+  spec.csharp:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+  spec.vb:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_AldatuErabiltzailea_INBENT_VISUAL_Entitateak_Erabiltzailea_
+  name: AldatuErabiltzailea
+  nameWithType: Erabiltzaile_kudeaketa.AldatuErabiltzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuErabiltzailea
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_EzabatuErabiltzailea_System_Int32_
+  name: EzabatuErabiltzailea
+  nameWithType: Erabiltzaile_kudeaketa.EzabatuErabiltzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EzabatuErabiltzailea
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_EgiaztatuLogin_System_String_System_String_
+  name: EgiaztatuLogin
+  nameWithType: Erabiltzaile_kudeaketa.EgiaztatuLogin
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.EgiaztatuLogin
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_AldatuPasahitza_System_String_System_String_
+  name: AldatuPasahitza
+  nameWithType: Erabiltzaile_kudeaketa.AldatuPasahitza
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.AldatuPasahitza
+- uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia
+  href: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.html#INBENT_VISUAL_Kudeatzaileak_Erabiltzaile_kudeaketa_LortuMintegia_System_String_
+  name: LortuMintegia
+  nameWithType: Erabiltzaile_kudeaketa.LortuMintegia
+  fullName: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa.LortuMintegia

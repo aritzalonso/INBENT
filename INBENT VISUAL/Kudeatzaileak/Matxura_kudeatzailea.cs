@@ -7,8 +7,9 @@ using INBENT_VISUAL.Entitateak;
 namespace INBENT_VISUAL.Kudeatzaileak
 {
     /// <summary>
-    /// MATXURA taularen datu-baseko eragiketak kudeatzen dituen klasea.
-    /// Gainera, GAILUA taulako 'egoera' eguneratzeaz arduratzen da matxura bat sortzean edo konpontzean.
+    /// MATXURA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea.
+    /// Gailuen matxurak sortu, irakurri eta konpontzeaz arduratzen da, 
+    /// gailuen egoera automatikoki eguneratuz transakzio logikoen bidez.
     /// </summary>
     public class Matxura_kudeatzailea
     {
@@ -17,22 +18,26 @@ namespace INBENT_VISUAL.Kudeatzaileak
         #endregion
 
         #region IRAKURRI (READ)
+
         /// <summary>
-        /// Konpondu gabe dauden matxuren zerrenda lortzen du (konponketa_data NULL denean).
+        /// Oraindik konpondu gabe dauden matxuren zerrenda lortzen du datu-basetik.
+        /// JOIN bidez gailuaren eta mintegiaren informazioa ere ekartzen du interfazean erakusteko.
         /// </summary>
+        /// <returns>Konpondu gabeko Matxura objektuen zerrenda.</returns>
         public List<Matxura> MatxurakErakutsiPOO()
         {
             List<Matxura> lista = new List<Matxura>();
 
-            // JOIN bat egiten dugu gailuaren marka eta gela ere ekartzeko, pantailan ondo ikusteko.
             string query = @"SELECT m.id_matxura, 
                                     m.matxura_data, 
                                     m.deskribapena, 
                                     m.id_gailua,
                                     g.marka, 
-                                    g.gela
+                                    g.gela,
+                                    min.izena AS mintegi_izena
                              FROM MATXURA m
                              JOIN GAILUA g ON m.id_gailua = g.id_gailua
+                             LEFT JOIN MINTEGIA min ON g.id_mintegia = min.id_mintegia
                              WHERE m.konponketa_data IS NULL";
 
             try
@@ -51,8 +56,8 @@ namespace INBENT_VISUAL.Kudeatzaileak
                         matx.Deskribapena = reader["deskribapena"].ToString();
                         matx.IdGailua = Convert.ToInt32(reader["id_gailua"]);
 
-                        // Testu formateatua sortzen dugu pantailako taularako: adib. "HP (Gela 101)"
                         matx.GailuInfo = $"{reader["marka"]} ({reader["gela"]})";
+                        matx.MintegiIzena = reader.IsDBNull(reader.GetOrdinal("mintegi_izena")) ? "Esleitu gabe" : reader["mintegi_izena"].ToString();
 
                         lista.Add(matx);
                     }
@@ -69,8 +74,11 @@ namespace INBENT_VISUAL.Kudeatzaileak
         }
 
         /// <summary>
-        /// Gailu zehatz baten matxura guztien historiala lortzen du (Konponduak eta konpondu gabeak).
+        /// Gailu zehatz baten matxuren historia osoa (konponduak eta konpondu gabeak) lortzen du, 
+        /// dataren arabera ordenatuta (berriena lehenengo).
         /// </summary>
+        /// <param name="idGailua">Historiala ikusi nahi den gailuaren identifikatzailea.</param>
+        /// <returns>Gailu horren Matxura objektuen zerrenda.</returns>
         public List<Matxura> LortuGailuarenHistoriala(int idGailua)
         {
             List<Matxura> lista = new List<Matxura>();
@@ -93,13 +101,11 @@ namespace INBENT_VISUAL.Kudeatzaileak
                         m.MatxuraData = Convert.ToDateTime(reader["matxura_data"]);
                         m.Deskribapena = reader["deskribapena"].ToString();
 
-                        // Konponketa data egon daiteke hutsik (NULL)
                         if (reader["konponketa_data"] != DBNull.Value)
                             m.KonponketaData = Convert.ToDateTime(reader["konponketa_data"]);
                         else
                             m.KonponketaData = null;
 
-                        // Konponketa deskribapena egon daiteke hutsik (NULL)
                         if (reader["konponketa_deskribapena"] != DBNull.Value)
                             m.KonponketaDeskribapena = reader["konponketa_deskribapena"].ToString();
                         else
@@ -120,9 +126,13 @@ namespace INBENT_VISUAL.Kudeatzaileak
         #endregion
 
         #region GEHITU ETA KONPONDU (CREATE & UPDATE)
+
         /// <summary>
-        /// Matxura berri bat erregistratzen du eta gailuaren egoera 'matxuratua' izatera pasatzen du.
+        /// Matxura berri bat erregistratzen du (INSERT) eta aldi berean lotutako gailuaren 
+        /// egoera 'matxuratua' izatera pasatzen du (UPDATE).
         /// </summary>
+        /// <param name="matxura">Datu-basean gordeko den Matxura objektua.</param>
+        /// <returns>Egia (true) ondo gorde bada, bestela Gezurra (false).</returns>
         public bool GehituMatxura(Matxura matxura)
         {
             try
@@ -130,7 +140,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    // A) Matxura taulan txertatu
                     string queryMatxura = "INSERT INTO MATXURA (matxura_data, deskribapena, id_gailua) VALUES (@data, @deskribapena, @idGailua)";
                     MySqlCommand cmdMatxura = new MySqlCommand(queryMatxura, konexioa);
                     cmdMatxura.Parameters.AddWithValue("@data", matxura.MatxuraData.ToString("yyyy-MM-dd"));
@@ -139,7 +148,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
 
                     cmdMatxura.ExecuteNonQuery();
 
-                    // B) Gailuaren egoera eguneratu
                     string queryEgoera = "UPDATE GAILUA SET egoera = 'matxuratua' WHERE id_gailua = @idGailua";
                     MySqlCommand cmdEgoera = new MySqlCommand(queryEgoera, konexioa);
                     cmdEgoera.Parameters.AddWithValue("@idGailua", matxura.IdGailua);
@@ -159,8 +167,11 @@ namespace INBENT_VISUAL.Kudeatzaileak
         }
 
         /// <summary>
-        /// Matxura bat konpondutzat ematen du (data eta azalpena gordez) eta gailua 'aktibo' izatera pasatzen du.
+        /// Existitzen den matxura bati konponketa-datuak (data eta azalpena) gehitzen dizkio (UPDATE) 
+        /// eta gailua berriro 'aktibo' egoeran jartzen du.
         /// </summary>
+        /// <param name="matxura">Konponketaren datuak dituen Matxura objektua.</param>
+        /// <returns>Egia (true) ondo eguneratu bada, bestela Gezurra (false).</returns>
         public bool KonponduMatxura(Matxura matxura)
         {
             try
@@ -168,7 +179,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    // A) Matxura eguneratu konponketaren datuekin
                     string queryMatxura = "UPDATE MATXURA SET konponketa_data = @data, konponketa_deskribapena = @desc WHERE id_matxura = @idMatxura";
                     MySqlCommand cmdMatxura = new MySqlCommand(queryMatxura, konexioa);
 
@@ -185,7 +195,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
                     cmdMatxura.Parameters.AddWithValue("@idMatxura", matxura.IdMatxura);
                     cmdMatxura.ExecuteNonQuery();
 
-                    // B) Gailuaren egoera berriro 'aktibo' bezala jarri (ID-a aurkituz azpikontsulta bidez)
                     string queryEgoera = "UPDATE GAILUA SET egoera = 'aktibo' WHERE id_gailua = (SELECT id_gailua FROM MATXURA WHERE id_matxura = @idMatxura)";
                     MySqlCommand cmdEgoera = new MySqlCommand(queryEgoera, konexioa);
                     cmdEgoera.Parameters.AddWithValue("@idMatxura", matxura.IdMatxura);

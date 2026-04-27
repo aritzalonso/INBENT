@@ -1,19 +1,21 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.ComponentModel;
-using INBENT_VISUAL.Entitateak; // Matxura klasea erabiltzeko beharrezkoa
+using INBENT_VISUAL.Entitateak;
 
 namespace INBENT_VISUAL.diseinuak
 {
+    /// <summary>
+    /// Gailu baten matxura berria erregistratzeko erabiltzen den leihoa (Formularioa).
+    /// Erabiltzaileari arazoaren deskribapena eta data eskatzen dizkio.
+    /// </summary>
     public partial class FMatxura : Form
     {
-        #region ALDAGAI OROKORRAK (VARIABLES PRIVADAS)
-        private int idSekretua; // Interfazean erakutsi gabe gailuaren ID-a gordetzeko
+        #region ALDAGAI OROKORRAK
+        private int idSekretua;
         #endregion
 
         #region PROPIETATEAK (DATUEN ENKAPSULAZIOA)
-        // Leihoan dauden datu zehatzak kanpotik (FNagusia) irakurtzeko propietateak
-
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int IdGailuAukeratua { get { return idSekretua; } }
@@ -27,9 +29,8 @@ namespace INBENT_VISUAL.diseinuak
         public string Deskribapena { get { return txtDeskribapena.Text.Trim(); } }
 
         /// <summary>
-        /// PROPIETATE AURRERATUA (POO):
-        /// Kaxetan dauden datuekin "Matxura" objektu berri bat zuzenean sortu eta itzultzen du.
-        /// Horrela, FNagusia-k zuzenean bidali diezaioke Kudeatzaileari.
+        /// Leihoan sartutako datuekin Matxura objektu berri bat sortu eta itzultzen du, 
+        /// Kudeatzailearen bidez datu-basean zuzenean gordetzeko prest.
         /// </summary>
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -49,45 +50,42 @@ namespace INBENT_VISUAL.diseinuak
 
         #region ERAIKITZAILEA (CONSTRUCTOR)
         /// <summary>
-        /// Leihoa hasieratzen du, matxuratutako gailuaren ID-a ezkutuan gordez eta izena erakutsiz.
+        /// Matxura leihoa hasieratzen du, matxuratu den gailuaren datuak kargatuz.
         /// </summary>
+        /// <param name="idGailua">Matxuratu den gailuaren identifikatzailea.</param>
+        /// <param name="gailuInfo">Gailuaren informazioa (marka eta gela) interfazean erakusteko.</param>
         public FMatxura(int idGailua, string gailuInfo)
         {
             InitializeComponent();
             this.idSekretua = idGailua;
 
-            // Desplegablea estetikoki prestatzen dugu, soilik aukeratutako gailua erakutsiz
             cmbGailua.DataSource = null;
             cmbGailua.Items.Clear();
             cmbGailua.Items.Add(gailuInfo);
             cmbGailua.SelectedIndex = 0;
 
-            // Blokeatu egiten dugu erabiltzaileak beste gailu bat hauta ez dezan
             cmbGailua.Enabled = false;
         }
         #endregion
 
         #region BOTOIEN EKINTZAK (EVENTOS)
         /// <summary>
-        /// Gorde botoia: Matxuraren azalpena idatzita dagoela balidatzen du.
+        /// 'Gorde' botoiaren gertaera (Click). 
+        /// Matxuraren azalpena idatzita dagoela balidatzen du eta, dena zuzen badago, 
+        /// DialogResult.OK seinalea bidaltzen du.
         /// </summary>
         private void btnGorde_Click(object sender, EventArgs e)
         {
-            // Nahitaezkoa da matxurari buruzko zehaztasunak ematea
             if (string.IsNullOrWhiteSpace(txtDeskribapena.Text))
             {
                 MessageBox.Show("Mesedez, idatzi matxuraren deskribapena.", "Datu falta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Dena ondo badago, onartu seinalea bidali eta leihoa ixten da
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
 
-        /// <summary>
-        /// Ezeztatu botoia: Erregistroa bertan behera utzi eta ixten da.
-        /// </summary>
         private void btnEzeztatu_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

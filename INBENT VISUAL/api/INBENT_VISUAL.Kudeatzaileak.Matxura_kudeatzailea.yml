@@ -1,0 +1,633 @@
+### YamlMime:ManagedReference
+items:
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  commentId: T:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  id: Matxura_kudeatzailea
+  parent: INBENT_VISUAL.Kudeatzaileak
+  children:
+  - INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  - INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  - INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala(System.Int32)
+  - INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO
+  langs:
+  - csharp
+  - vb
+  name: Matxura_kudeatzailea
+  nameWithType: Matxura_kudeatzailea
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  type: Class
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: Matxura_kudeatzailea
+    path: Kudeatzaileak/Matxura_kudeatzailea.cs
+    startLine: 13
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: >-
+    MATXURA taularen datu-baseko eragiketak (CRUD) kudeatzen dituen klasea.
+
+    Gailuen matxurak sortu, irakurri eta konpontzeaz arduratzen da, 
+
+    gailuen egoera automatikoki eguneratuz transakzio logikoen bidez.
+  example: []
+  syntax:
+    content: public class Matxura_kudeatzailea
+    content.vb: Public Class Matxura_kudeatzailea
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO
+  id: MatxurakErakutsiPOO
+  parent: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  langs:
+  - csharp
+  - vb
+  name: MatxurakErakutsiPOO()
+  nameWithType: Matxura_kudeatzailea.MatxurakErakutsiPOO()
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO()
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: MatxurakErakutsiPOO
+    path: Kudeatzaileak/Matxura_kudeatzailea.cs
+    startLine: 26
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: >-
+    Oraindik konpondu gabe dauden matxuren zerrenda lortzen du datu-basetik.
+
+    JOIN bidez gailuaren eta mintegiaren informazioa ere ekartzen du interfazean erakusteko.
+  example: []
+  syntax:
+    content: public List<Matxura> MatxurakErakutsiPOO()
+    return:
+      type: System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Matxura}
+      description: Konpondu gabeko Matxura objektuen zerrenda.
+    content.vb: Public Function MatxurakErakutsiPOO() As List(Of Matxura)
+  overload: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO*
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala(System.Int32)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala(System.Int32)
+  id: LortuGailuarenHistoriala(System.Int32)
+  parent: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  langs:
+  - csharp
+  - vb
+  name: LortuGailuarenHistoriala(int)
+  nameWithType: Matxura_kudeatzailea.LortuGailuarenHistoriala(int)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala(int)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: LortuGailuarenHistoriala
+    path: Kudeatzaileak/Matxura_kudeatzailea.cs
+    startLine: 81
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: >-
+    Gailu zehatz baten matxuren historia osoa (konponduak eta konpondu gabeak) lortzen du, 
+
+    dataren arabera ordenatuta (berriena lehenengo).
+  example: []
+  syntax:
+    content: public List<Matxura> LortuGailuarenHistoriala(int idGailua)
+    parameters:
+    - id: idGailua
+      type: System.Int32
+      description: Historiala ikusi nahi den gailuaren identifikatzailea.
+    return:
+      type: System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Matxura}
+      description: Gailu horren Matxura objektuen zerrenda.
+    content.vb: Public Function LortuGailuarenHistoriala(idGailua As Integer) As List(Of Matxura)
+  overload: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala*
+  nameWithType.vb: Matxura_kudeatzailea.LortuGailuarenHistoriala(Integer)
+  fullName.vb: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala(Integer)
+  name.vb: LortuGailuarenHistoriala(Integer)
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  id: GehituMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  parent: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  langs:
+  - csharp
+  - vb
+  name: GehituMatxura(Matxura)
+  nameWithType: Matxura_kudeatzailea.GehituMatxura(Matxura)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: GehituMatxura
+    path: Kudeatzaileak/Matxura_kudeatzailea.cs
+    startLine: 135
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: >-
+    Matxura berri bat erregistratzen du (INSERT) eta aldi berean lotutako gailuaren 
+
+    egoera 'matxuratua' izatera pasatzen du (UPDATE).
+  example: []
+  syntax:
+    content: public bool GehituMatxura(Matxura matxura)
+    parameters:
+    - id: matxura
+      type: INBENT_VISUAL.Entitateak.Matxura
+      description: Datu-basean gordeko den Matxura objektua.
+    return:
+      type: System.Boolean
+      description: Egia (true) ondo gorde bada, bestela Gezurra (false).
+    content.vb: Public Function GehituMatxura(matxura As Matxura) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura*
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  commentId: M:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  id: KonponduMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  parent: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+  langs:
+  - csharp
+  - vb
+  name: KonponduMatxura(Matxura)
+  nameWithType: Matxura_kudeatzailea.KonponduMatxura(Matxura)
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura(INBENT_VISUAL.Entitateak.Matxura)
+  type: Method
+  source:
+    remote:
+      path: INBENT VISUAL/Kudeatzaileak/Matxura_kudeatzailea.cs
+      branch: master
+      repo: https://github.com/aritzalonso/INBENT.git
+    id: KonponduMatxura
+    path: Kudeatzaileak/Matxura_kudeatzailea.cs
+    startLine: 174
+  assemblies:
+  - INBENT VISUAL
+  namespace: INBENT_VISUAL.Kudeatzaileak
+  summary: >-
+    Existitzen den matxura bati konponketa-datuak (data eta azalpena) gehitzen dizkio (UPDATE) 
+
+    eta gailua berriro 'aktibo' egoeran jartzen du.
+  example: []
+  syntax:
+    content: public bool KonponduMatxura(Matxura matxura)
+    parameters:
+    - id: matxura
+      type: INBENT_VISUAL.Entitateak.Matxura
+      description: Konponketaren datuak dituen Matxura objektua.
+    return:
+      type: System.Boolean
+      description: Egia (true) ondo eguneratu bada, bestela Gezurra (false).
+    content.vb: Public Function KonponduMatxura(matxura As Matxura) As Boolean
+  overload: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura*
+references:
+- uid: INBENT_VISUAL.Kudeatzaileak
+  commentId: N:INBENT_VISUAL.Kudeatzaileak
+  href: INBENT_VISUAL.html
+  name: INBENT_VISUAL.Kudeatzaileak
+  nameWithType: INBENT_VISUAL.Kudeatzaileak
+  fullName: INBENT_VISUAL.Kudeatzaileak
+  spec.csharp:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Kudeatzaileak
+    name: Kudeatzaileak
+    href: INBENT_VISUAL.Kudeatzaileak.html
+  spec.vb:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Kudeatzaileak
+    name: Kudeatzaileak
+    href: INBENT_VISUAL.Kudeatzaileak.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO
+  href: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.html#INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_MatxurakErakutsiPOO
+  name: MatxurakErakutsiPOO
+  nameWithType: Matxura_kudeatzailea.MatxurakErakutsiPOO
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.MatxurakErakutsiPOO
+- uid: System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Matxura}
+  commentId: T:System.Collections.Generic.List{INBENT_VISUAL.Entitateak.Matxura}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Matxura>
+  nameWithType: List<Matxura>
+  fullName: System.Collections.Generic.List<INBENT_VISUAL.Entitateak.Matxura>
+  nameWithType.vb: List(Of Matxura)
+  fullName.vb: System.Collections.Generic.List(Of INBENT_VISUAL.Entitateak.Matxura)
+  name.vb: List(Of Matxura)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: INBENT_VISUAL.Entitateak.Matxura
+    name: Matxura
+    href: INBENT_VISUAL.Entitateak.Matxura.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: INBENT_VISUAL.Entitateak.Matxura
+    name: Matxura
+    href: INBENT_VISUAL.Entitateak.Matxura.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala
+  href: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.html#INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_LortuGailuarenHistoriala_System_Int32_
+  name: LortuGailuarenHistoriala
+  nameWithType: Matxura_kudeatzailea.LortuGailuarenHistoriala
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.LortuGailuarenHistoriala
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura
+  href: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.html#INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_GehituMatxura_INBENT_VISUAL_Entitateak_Matxura_
+  name: GehituMatxura
+  nameWithType: Matxura_kudeatzailea.GehituMatxura
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.GehituMatxura
+- uid: INBENT_VISUAL.Entitateak.Matxura
+  commentId: T:INBENT_VISUAL.Entitateak.Matxura
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Matxura.html
+  name: Matxura
+  nameWithType: Matxura
+  fullName: INBENT_VISUAL.Entitateak.Matxura
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: INBENT_VISUAL.Entitateak
+  commentId: N:INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.html
+  name: INBENT_VISUAL.Entitateak
+  nameWithType: INBENT_VISUAL.Entitateak
+  fullName: INBENT_VISUAL.Entitateak
+  spec.csharp:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+  spec.vb:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+- uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura*
+  commentId: Overload:INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura
+  href: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.html#INBENT_VISUAL_Kudeatzaileak_Matxura_kudeatzailea_KonponduMatxura_INBENT_VISUAL_Entitateak_Matxura_
+  name: KonponduMatxura
+  nameWithType: Matxura_kudeatzailea.KonponduMatxura
+  fullName: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea.KonponduMatxura

@@ -1,0 +1,84 @@
+### YamlMime:TableOfContent
+items:
+- uid: INBENT_VISUAL.Entitateak
+  name: INBENT_VISUAL.Entitateak
+  type: Namespace
+  items:
+  - uid: INBENT_VISUAL.Entitateak.Erabiltzailea
+    name: Erabiltzailea
+    type: Class
+  - uid: INBENT_VISUAL.Entitateak.Gailua
+    name: Gailua
+    type: Class
+  - uid: INBENT_VISUAL.Entitateak.Inprimagailua
+    name: Inprimagailua
+    type: Class
+  - uid: INBENT_VISUAL.Entitateak.Matxura
+    name: Matxura
+    type: Class
+  - uid: INBENT_VISUAL.Entitateak.Mintegia
+    name: Mintegia
+    type: Class
+  - uid: INBENT_VISUAL.Entitateak.Ordenagailua
+    name: Ordenagailua
+    type: Class
+- uid: INBENT_VISUAL.Kudeatzaileak
+  name: INBENT_VISUAL.Kudeatzaileak
+  type: Namespace
+  items:
+  - uid: INBENT_VISUAL.Kudeatzaileak.Erabiltzaile_kudeaketa
+    name: Erabiltzaile_kudeaketa
+    type: Class
+  - uid: INBENT_VISUAL.Kudeatzaileak.Estatistikak_kudeatzailea
+    name: Estatistikak_kudeatzailea
+    type: Class
+  - uid: INBENT_VISUAL.Kudeatzaileak.Gailu_kudeatzailea
+    name: Gailu_kudeatzailea
+    type: Class
+  - uid: INBENT_VISUAL.Kudeatzaileak.Matxura_kudeatzailea
+    name: Matxura_kudeatzailea
+    type: Class
+  - uid: INBENT_VISUAL.Kudeatzaileak.Mintegi_Kudeatzailea
+    name: Mintegi_Kudeatzailea
+    type: Class
+- uid: INBENT_VISUAL.diseinuak
+  name: INBENT_VISUAL.diseinuak
+  type: Namespace
+  items:
+  - uid: INBENT_VISUAL.diseinuak.FBaja
+    name: FBaja
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FErabiltzailea
+    name: FErabiltzailea
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FGailua
+    name: FGailua
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FHistoriala
+    name: FHistoriala
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FKonponketa
+    name: FKonponketa
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FLogin
+    name: FLogin
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FMatxura
+    name: FMatxura
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FMintegiAldaketa
+    name: FMintegiAldaketa
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FMintegia
+    name: FMintegia
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FNagusia
+    name: FNagusia
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FPasahitzaAldatu
+    name: FPasahitzaAldatu
+    type: Class
+  - uid: INBENT_VISUAL.diseinuak.FProfila
+    name: FProfila
+    type: Class
+memberLayout: SamePage

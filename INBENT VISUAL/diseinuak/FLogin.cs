@@ -4,10 +4,16 @@ using System.Windows.Forms;
 
 namespace INBENT_VISUAL.diseinuak
 {
+    /// <summary>
+    /// Aplikazioaren sarrera-pantaila (Login). Erabiltzaileak identifikatzeko eta 
+    /// dagozkion baimen zein mintegiekin pantaila nagusia (FNagusia) irekitzeko ardura du.
+    /// </summary>
     public partial class FLogin : Form
     {
         #region ERAIKITZAILEA (CONSTRUCTOR)
-        // Login leihoa hasieratzen du
+        /// <summary>
+        /// Login leihoa hasieratzen du.
+        /// </summary>
         public FLogin()
         {
             InitializeComponent();
@@ -16,7 +22,10 @@ namespace INBENT_VISUAL.diseinuak
 
         #region BOTOIEN EKINTZAK (EVENTOS)
         /// <summary>
-        /// Saioa hasteko botoia. Datuak balidatu eta Kudeatzaileari galdetzen dio.
+        /// 'Saioa Hasi' botoiaren gertaera (Click).
+        /// Erabiltzaileak sartutako kredentzialak irakurtzen ditu, datu-basearen aurka 
+        /// balidatzen ditu (Erabiltzaile_kudeaketa erabiliz), eta zuzenak badira, 
+        /// dagokion rola eta mintegiarekin pantaila nagusia (FNagusia) irekitzen du.
         /// </summary>
         private void BSaioa_Click_1(object sender, EventArgs e)
         {
@@ -37,10 +46,13 @@ namespace INBENT_VISUAL.diseinuak
             // 3. Erantzunaren arabera sartu edo errorea eman
             if (rola != null)
             {
+                // BERRIA: Mintegia lortzen dugu (Erabiltzaile_kudeaketa.cs barruan LortuMintegia funtzioa sortu beharko duzu horretarako, 'rola' lortu duzun modu berean)
+                string mintegia = kudeatzailea.LortuMintegia(izena);
+
                 this.Hide(); // Login leihoa ezkutatzen dugu
 
-                // Pantaila nagusia ireki, erabiltzailearen izena eta rola pasatuz
-                FNagusia pantailaNagusia = new FNagusia(izena, rola);
+                // Pantaila nagusia ireki, erabiltzailearen izena, rola ETA mintegia pasatuz
+                FNagusia pantailaNagusia = new FNagusia(izena, rola, mintegia);
                 pantailaNagusia.ShowDialog();
 
                 this.Close(); // Pantaila nagusia ixtean, aplikazio osoa itxi
@@ -53,9 +65,6 @@ namespace INBENT_VISUAL.diseinuak
             }
         }
 
-        /// <summary>
-        /// Aplikaziotik irteteko botoia.
-        /// </summary>
         private void BIrten_Click(object sender, EventArgs e)
         {
             Application.Exit();

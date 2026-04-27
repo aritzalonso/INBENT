@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: INBENT_VISUAL.Entitateak
+  commentId: N:INBENT_VISUAL.Entitateak
+  id: INBENT_VISUAL.Entitateak
+  children:
+  - INBENT_VISUAL.Entitateak.Erabiltzailea
+  - INBENT_VISUAL.Entitateak.Gailua
+  - INBENT_VISUAL.Entitateak.Inprimagailua
+  - INBENT_VISUAL.Entitateak.Matxura
+  - INBENT_VISUAL.Entitateak.Mintegia
+  - INBENT_VISUAL.Entitateak.Ordenagailua
+  langs:
+  - csharp
+  - vb
+  name: INBENT_VISUAL.Entitateak
+  nameWithType: INBENT_VISUAL.Entitateak
+  fullName: INBENT_VISUAL.Entitateak
+  type: Namespace
+  assemblies:
+  - INBENT VISUAL
+references:
+- uid: INBENT_VISUAL.Entitateak.Erabiltzailea
+  commentId: T:INBENT_VISUAL.Entitateak.Erabiltzailea
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Erabiltzailea.html
+  name: Erabiltzailea
+  nameWithType: Erabiltzailea
+  fullName: INBENT_VISUAL.Entitateak.Erabiltzailea
+- uid: INBENT_VISUAL.Entitateak.Gailua
+  commentId: T:INBENT_VISUAL.Entitateak.Gailua
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Gailua.html
+  name: Gailua
+  nameWithType: Gailua
+  fullName: INBENT_VISUAL.Entitateak.Gailua
+- uid: INBENT_VISUAL.Entitateak.Inprimagailua
+  commentId: T:INBENT_VISUAL.Entitateak.Inprimagailua
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Inprimagailua.html
+  name: Inprimagailua
+  nameWithType: Inprimagailua
+  fullName: INBENT_VISUAL.Entitateak.Inprimagailua
+- uid: INBENT_VISUAL.Entitateak.Matxura
+  commentId: T:INBENT_VISUAL.Entitateak.Matxura
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Matxura.html
+  name: Matxura
+  nameWithType: Matxura
+  fullName: INBENT_VISUAL.Entitateak.Matxura
+- uid: INBENT_VISUAL.Entitateak.Mintegia
+  commentId: T:INBENT_VISUAL.Entitateak.Mintegia
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Mintegia.html
+  name: Mintegia
+  nameWithType: Mintegia
+  fullName: INBENT_VISUAL.Entitateak.Mintegia
+- uid: INBENT_VISUAL.Entitateak.Ordenagailua
+  commentId: T:INBENT_VISUAL.Entitateak.Ordenagailua
+  parent: INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.Entitateak.Ordenagailua.html
+  name: Ordenagailua
+  nameWithType: Ordenagailua
+  fullName: INBENT_VISUAL.Entitateak.Ordenagailua
+- uid: INBENT_VISUAL.Entitateak
+  commentId: N:INBENT_VISUAL.Entitateak
+  href: INBENT_VISUAL.html
+  name: INBENT_VISUAL.Entitateak
+  nameWithType: INBENT_VISUAL.Entitateak
+  fullName: INBENT_VISUAL.Entitateak
+  spec.csharp:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html
+  spec.vb:
+  - uid: INBENT_VISUAL
+    name: INBENT_VISUAL
+    href: INBENT_VISUAL.html
+  - name: .
+  - uid: INBENT_VISUAL.Entitateak
+    name: Entitateak
+    href: INBENT_VISUAL.Entitateak.html

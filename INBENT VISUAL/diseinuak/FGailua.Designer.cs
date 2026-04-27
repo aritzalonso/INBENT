@@ -21,6 +21,8 @@
             this.lblTituloa = new System.Windows.Forms.Label();
             this.lblMota = new System.Windows.Forms.Label();
             this.cmbMota = new System.Windows.Forms.ComboBox();
+            this.lblMintegia = new System.Windows.Forms.Label();
+            this.cmbMintegia = new System.Windows.Forms.ComboBox();
             this.lblMarka = new System.Windows.Forms.Label();
             this.txtMarka = new System.Windows.Forms.TextBox();
             this.lblGela = new System.Windows.Forms.Label();
@@ -92,40 +94,60 @@
             this.cmbMota.SelectedIndexChanged += new System.EventHandler(this.cmbMota_SelectedIndexChanged);
 
             // 
+            // lblMintegia
+            // 
+            this.lblMintegia.AutoSize = true;
+            this.lblMintegia.Location = new System.Drawing.Point(30, 135);
+            this.lblMintegia.Name = "lblMintegia";
+            this.lblMintegia.Size = new System.Drawing.Size(61, 16);
+            this.lblMintegia.TabIndex = 4;
+            this.lblMintegia.Text = "Mintegia:";
+
+            // 
+            // cmbMintegia
+            // 
+            this.cmbMintegia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMintegia.FormattingEnabled = true;
+            this.cmbMintegia.Location = new System.Drawing.Point(34, 160);
+            this.cmbMintegia.Name = "cmbMintegia";
+            this.cmbMintegia.Size = new System.Drawing.Size(350, 24);
+            this.cmbMintegia.TabIndex = 5;
+
+            // 
             // lblMarka
             // 
             this.lblMarka.AutoSize = true;
-            this.lblMarka.Location = new System.Drawing.Point(30, 135);
+            this.lblMarka.Location = new System.Drawing.Point(30, 200);
             this.lblMarka.Name = "lblMarka";
             this.lblMarka.Size = new System.Drawing.Size(48, 16);
-            this.lblMarka.TabIndex = 4;
+            this.lblMarka.TabIndex = 6;
             this.lblMarka.Text = "Marka:";
 
             // 
             // txtMarka
             // 
-            this.txtMarka.Location = new System.Drawing.Point(34, 160);
+            this.txtMarka.Location = new System.Drawing.Point(34, 225);
             this.txtMarka.Name = "txtMarka";
             this.txtMarka.Size = new System.Drawing.Size(165, 22);
-            this.txtMarka.TabIndex = 5;
+            this.txtMarka.TabIndex = 7;
 
             // 
             // lblGela
             // 
             this.lblGela.AutoSize = true;
-            this.lblGela.Location = new System.Drawing.Point(215, 135);
+            this.lblGela.Location = new System.Drawing.Point(215, 200);
             this.lblGela.Name = "lblGela";
             this.lblGela.Size = new System.Drawing.Size(39, 16);
-            this.lblGela.TabIndex = 6;
+            this.lblGela.TabIndex = 8;
             this.lblGela.Text = "Gela:";
 
             // 
             // txtGela
             // 
-            this.txtGela.Location = new System.Drawing.Point(219, 160);
+            this.txtGela.Location = new System.Drawing.Point(219, 225);
             this.txtGela.Name = "txtGela";
             this.txtGela.Size = new System.Drawing.Size(165, 22);
-            this.txtGela.TabIndex = 7;
+            this.txtGela.TabIndex = 9;
 
             // 
             // pnlOrdenagailua
@@ -136,10 +158,10 @@
             this.pnlOrdenagailua.Controls.Add(this.txtROM);
             this.pnlOrdenagailua.Controls.Add(this.lblCPU);
             this.pnlOrdenagailua.Controls.Add(this.txtCPU);
-            this.pnlOrdenagailua.Location = new System.Drawing.Point(30, 200);
+            this.pnlOrdenagailua.Location = new System.Drawing.Point(30, 265);
             this.pnlOrdenagailua.Name = "pnlOrdenagailua";
             this.pnlOrdenagailua.Size = new System.Drawing.Size(360, 130);
-            this.pnlOrdenagailua.TabIndex = 8;
+            this.pnlOrdenagailua.TabIndex = 10;
             this.pnlOrdenagailua.Visible = false;
 
             // 
@@ -201,10 +223,10 @@
             // 
             this.pnlInprimagailua.Controls.Add(this.lblKoloretakoa);
             this.pnlInprimagailua.Controls.Add(this.cmbKoloretakoa);
-            this.pnlInprimagailua.Location = new System.Drawing.Point(30, 200);
+            this.pnlInprimagailua.Location = new System.Drawing.Point(30, 265);
             this.pnlInprimagailua.Name = "pnlInprimagailua";
             this.pnlInprimagailua.Size = new System.Drawing.Size(360, 80);
-            this.pnlInprimagailua.TabIndex = 9;
+            this.pnlInprimagailua.TabIndex = 11;
             this.pnlInprimagailua.Visible = false;
 
             // 
@@ -234,20 +256,20 @@
             // lblErosteData
             // 
             this.lblErosteData.AutoSize = true;
-            this.lblErosteData.Location = new System.Drawing.Point(30, 340);
+            this.lblErosteData.Location = new System.Drawing.Point(30, 405);
             this.lblErosteData.Name = "lblErosteData";
             this.lblErosteData.Size = new System.Drawing.Size(81, 16);
-            this.lblErosteData.TabIndex = 10;
+            this.lblErosteData.TabIndex = 12;
             this.lblErosteData.Text = "Eroste Data:";
 
             // 
             // dtpErosteData
             // 
             this.dtpErosteData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpErosteData.Location = new System.Drawing.Point(34, 365);
+            this.dtpErosteData.Location = new System.Drawing.Point(34, 430);
             this.dtpErosteData.Name = "dtpErosteData";
             this.dtpErosteData.Size = new System.Drawing.Size(350, 22);
-            this.dtpErosteData.TabIndex = 11;
+            this.dtpErosteData.TabIndex = 13;
 
             // 
             // btnGorde
@@ -255,10 +277,10 @@
             this.btnGorde.BackColor = System.Drawing.Color.FromArgb(46, 204, 113);
             this.btnGorde.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGorde.ForeColor = System.Drawing.Color.White;
-            this.btnGorde.Location = new System.Drawing.Point(40, 420);
+            this.btnGorde.Location = new System.Drawing.Point(40, 485);
             this.btnGorde.Name = "btnGorde";
             this.btnGorde.Size = new System.Drawing.Size(150, 40);
-            this.btnGorde.TabIndex = 12;
+            this.btnGorde.TabIndex = 14;
             this.btnGorde.Text = "💾 Gorde";
             this.btnGorde.UseVisualStyleBackColor = false;
             this.btnGorde.Click += new System.EventHandler(this.btnGorde_Click);
@@ -269,10 +291,10 @@
             this.btnEzeztatu.BackColor = System.Drawing.Color.FromArgb(231, 76, 60);
             this.btnEzeztatu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEzeztatu.ForeColor = System.Drawing.Color.White;
-            this.btnEzeztatu.Location = new System.Drawing.Point(230, 420);
+            this.btnEzeztatu.Location = new System.Drawing.Point(230, 485);
             this.btnEzeztatu.Name = "btnEzeztatu";
             this.btnEzeztatu.Size = new System.Drawing.Size(150, 40);
-            this.btnEzeztatu.TabIndex = 13;
+            this.btnEzeztatu.TabIndex = 15;
             this.btnEzeztatu.Text = "❌ Ezeztatu";
             this.btnEzeztatu.UseVisualStyleBackColor = false;
             this.btnEzeztatu.Click += new System.EventHandler(this.btnEzeztatu_Click);
@@ -282,7 +304,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 490);
+            this.ClientSize = new System.Drawing.Size(420, 555);
             this.Controls.Add(this.btnEzeztatu);
             this.Controls.Add(this.btnGorde);
             this.Controls.Add(this.dtpErosteData);
@@ -293,6 +315,8 @@
             this.Controls.Add(this.lblGela);
             this.Controls.Add(this.txtMarka);
             this.Controls.Add(this.lblMarka);
+            this.Controls.Add(this.cmbMintegia);
+            this.Controls.Add(this.lblMintegia);
             this.Controls.Add(this.cmbMota);
             this.Controls.Add(this.lblMota);
             this.Controls.Add(this.panelHeader);
@@ -317,6 +341,8 @@
         private System.Windows.Forms.Label lblTituloa;
         private System.Windows.Forms.Label lblMota;
         public System.Windows.Forms.ComboBox cmbMota;
+        private System.Windows.Forms.Label lblMintegia;
+        public System.Windows.Forms.ComboBox cmbMintegia;
         private System.Windows.Forms.Label lblMarka;
         public System.Windows.Forms.TextBox txtMarka;
         private System.Windows.Forms.Label lblGela;

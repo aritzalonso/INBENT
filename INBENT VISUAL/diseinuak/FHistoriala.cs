@@ -7,9 +7,19 @@ using INBENT_VISUAL.Kudeatzaileak;
 
 namespace INBENT_VISUAL.diseinuak
 {
+    /// <summary>
+    /// Hautatutako gailu baten matxuren historia osoa erakusten duen leihoa.
+    /// Gainera, gailua 'Bajan' badago, horren arrazoia nabarmentzen du.
+    /// </summary>
     public partial class FHistoriala : Form
     {
         #region ERAIKITZAILEA
+        /// <summary>
+        /// Historialaren leihoa abiarazten du gailuaren datuekin.
+        /// </summary>
+        /// <param name="idGailua">Gailuaren datu-baseko identifikatzailea.</param>
+        /// <param name="gailuInfo">Gailuaren marka eta gela (leihoaren tituluan erakusteko).</param>
+        /// <param name="egoera">Gailuaren uneko egoera (Aktibo, Bajan, etab.).</param>
         public FHistoriala(int idGailua, string gailuInfo, string egoera)
         {
             InitializeComponent();
@@ -20,27 +30,29 @@ namespace INBENT_VISUAL.diseinuak
         }
         #endregion
 
-        #region DATUAK KARGATZEA (POO)
+        #region DATUAK KARGATZEKO FUNTZIOAK
         /// <summary>
-        /// Kudeatzaileei objektu zerrendak eskatzen dizkie SQL zuzenean erabili gabe.
+        /// Aukeratutako gailuaren matxuren historiala datu-basetik ekarri eta DataGridView-an 
+        /// erakusten du (LINQ erabiliz formatua emanez). Gailua bajan badago, baja horren arrazoia 
+        /// bilatzen du azpititulu gorrian erakusteko.
         /// </summary>
+        /// <param name="id">Gailuaren identifikatzailea.</param>
+        /// <param name="egoera">Gailuaren egungo egoera (Aktibo, Bajan...).</param>
         private void KargatuHistorialaPOO(int id, string egoera)
         {
             try
             {
-                // 1. Matxuren motorrari historiala (objektu zerrenda) eskatzen diogu
                 Matxura_kudeatzailea matxuraKudeatzailea = new Matxura_kudeatzailea();
                 List<Matxura> historiala = matxuraKudeatzailea.LortuGailuarenHistoriala(id);
 
                 if (historiala.Count > 0)
                 {
-                    // Zerrenda badago, formatua ematen diogu taulan ondo ikusteko
                     var taulaFormatua = historiala.Select(m => new
                     {
                         Apurtze_Data = m.MatxuraData.ToString("dd/MM/yyyy"),
                         Arazoa = m.Deskribapena,
-                        Konponketa_Data = m.KonponketaData.HasValue ? m.KonponketaData.Value.ToString("dd/MM/yyyy") : "Pendiente",
-                        Irtenbidea = string.IsNullOrEmpty(m.KonponketaDeskribapena) ? "Pendiente" : m.KonponketaDeskribapena
+                        Konponketa_Data = m.KonponketaData.HasValue ? m.KonponketaData.Value.ToString("dd/MM/yyyy") : "Konpondu gabe",
+                        Irtenbidea = string.IsNullOrEmpty(m.KonponketaDeskribapena) ? "Konpondu gabe" : m.KonponketaDeskribapena
                     }).ToList();
 
                     dgvHistoriala.DataSource = taulaFormatua;
@@ -48,33 +60,19 @@ namespace INBENT_VISUAL.diseinuak
                 else
                 {
                     dgvHistoriala.DataSource = null;
-
-                    // Si no tiene historial y NO está de baja, damos el mensaje de que todo va bien.
-                    string egoeraBehinBihineko = egoera.ToLower().Trim();
-                    if (egoeraBehinBihineko != "bajan" && egoeraBehinBihineko != "baja")
-                    {
-                        MessageBox.Show("Gailu honek ez du matxurarik eduki inoiz. Ezin hobeto dabil!",
-                                        "Informazioa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
                 }
 
-                // 2. BUG-A KONPONDUTA: Gailua bajan badago, arrazoia eskatzen diogu Gailuen motorrari. BETI.
                 string egoeraGarbita = egoera.ToLower().Trim();
                 if (egoeraGarbita == "bajan" || egoeraGarbita == "baja")
                 {
                     Gailu_kudeatzailea gailuKudeatzailea = new Gailu_kudeatzailea();
                     string arrazoia = gailuKudeatzailea.LortuBajaArrazoia(id);
-
-                    // Mezua erakutsi (Matxurarik ez bazuen jada erakutsi dugula edo ez garrantzirik gabe, argi geratzeko)
-                    if (historiala.Count == 0)
-                    {
-                        MessageBox.Show($"Gailu honek ez du inoiz matxurarik izan, baina gaur egun BAJAN dago.\n\nBaja arrazoia: {arrazoia}",
-                                       "Informazioa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-
-                    // Azpititulu berrian gehituko dugu testua, modu dotorean eta moztu gabe
                     lblBajaArrazoia.Text = $"🔴 BAJAN: {arrazoia}";
                     lblBajaArrazoia.Visible = true;
+                }
+                else
+                {
+                    lblBajaArrazoia.Visible = false;
                 }
 
             }
@@ -83,7 +81,7 @@ namespace INBENT_VISUAL.diseinuak
                 MessageBox.Show("Errorea historiala kargatzean: " + ex.Message, "Errorea", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
+        #endregion 
 
         #region BOTOIEN EKINTZAK
         private void btnItxi_Click(object sender, EventArgs e)

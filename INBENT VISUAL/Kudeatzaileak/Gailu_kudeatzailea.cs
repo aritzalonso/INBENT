@@ -18,20 +18,24 @@ namespace INBENT_VISUAL.Kudeatzaileak
         #endregion
 
         #region IRAKURRI (READ)
+
         /// <summary>
-        /// Gailu guztiak datu-basetik irakurri eta haien motaren arabera (Ordenagailua/Inprimagailua) objektu zerrenda bat itzultzen du (Polimorfismoa).
+        /// Datu-basetik gailu guztien informazioa irakurtzen du (JOIN anitz erabiliz). 
+        /// Irakurritako datuen arabera, Polimorfismoa aplikatuz Ordenagailu edo Inprimagailu 
+        /// objektuak sortzen ditu eta zerrenda bakar batean itzultzen ditu.
         /// </summary>
+        /// <returns>Gailu objektuen (eta bere klase eratorrien) zerrenda polimorfikoa.</returns>
         public List<Gailua> GailuakErakutsiPOO()
         {
             List<Gailua> inbentarioa = new List<Gailua>();
 
-            // Gailu guztiak ekartzen ditugu, beraien taula espezifikoekin (LEFT JOIN) lotuz
-            string query = @"SELECT g.id_gailua, g.marka, g.gela, g.eroste_data, g.egoera, g.baja_arrazoia,
+            string query = @"SELECT g.id_gailua, g.marka, g.gela, g.eroste_data, g.egoera, g.baja_arrazoia, g.id_mintegia, m.izena as mintegi_izena,
                                     o.id_gailua as pc_id, o.ram, o.rom, o.cpu,
                                     i.id_gailua as inp_id, i.koloretakoa
                              FROM GAILUA g
                              LEFT JOIN ORDENAGAILUA o ON g.id_gailua = o.id_gailua
-                             LEFT JOIN INPRIMAGAILUA i ON g.id_gailua = i.id_gailua";
+                             LEFT JOIN INPRIMAGAILUA i ON g.id_gailua = i.id_gailua
+                             LEFT JOIN MINTEGIA m ON g.id_mintegia = m.id_mintegia";
 
             try
             {
@@ -43,7 +47,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
 
                     while (reader.Read())
                     {
-                        // 1. ORDENAGAILUA den egiaztatzen dugu
                         if (!reader.IsDBNull(reader.GetOrdinal("pc_id")))
                         {
                             Ordenagailua pc = new Ordenagailua();
@@ -56,10 +59,11 @@ namespace INBENT_VISUAL.Kudeatzaileak
                             pc.Ram = reader["ram"].ToString();
                             pc.Rom = reader["rom"].ToString();
                             pc.Cpu = reader["cpu"].ToString();
+                            pc.IdMintegia = reader.IsDBNull(reader.GetOrdinal("id_mintegia")) ? (int?)null : Convert.ToInt32(reader["id_mintegia"]);
+                            pc.MintegiIzena = reader.IsDBNull(reader.GetOrdinal("mintegi_izena")) ? "Esleitu gabe" : reader["mintegi_izena"].ToString();
 
-                            inbentarioa.Add(pc); // Zerrenda orokorrera gehitu
+                            inbentarioa.Add(pc);
                         }
-                        // 2. INPRIMAGAILUA den egiaztatzen dugu
                         else if (!reader.IsDBNull(reader.GetOrdinal("inp_id")))
                         {
                             Inprimagailua inp = new Inprimagailua();
@@ -70,8 +74,10 @@ namespace INBENT_VISUAL.Kudeatzaileak
                             inp.Egoera = reader["egoera"].ToString();
                             inp.BajaArrazoia = reader["baja_arrazoia"]?.ToString() ?? "";
                             inp.Koloretakoa = reader["koloretakoa"].ToString();
+                            inp.IdMintegia = reader.IsDBNull(reader.GetOrdinal("id_mintegia")) ? (int?)null : Convert.ToInt32(reader["id_mintegia"]);
+                            inp.MintegiIzena = reader.IsDBNull(reader.GetOrdinal("mintegi_izena")) ? "Esleitu gabe" : reader["mintegi_izena"].ToString();
 
-                            inbentarioa.Add(inp); // Zerrenda orokorrera gehitu
+                            inbentarioa.Add(inp);
                         }
                     }
                     reader.Close();
@@ -85,9 +91,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
             return inbentarioa;
         }
 
-        /// <summary>
-        /// Gailu aktiboak soilik itzultzen ditu (Matxurak sortzeko desplegablean erabiltzeko).
-        /// </summary>
         public DataTable GailuAktiboakErakutsi()
         {
             DataTable taula = new DataTable();
@@ -110,9 +113,6 @@ namespace INBENT_VISUAL.Kudeatzaileak
             return taula;
         }
 
-        /// <summary>
-        /// Baja egoeran dagoen gailu baten bajaren arrazoia lortzen du.
-        /// </summary>
         public string LortuBajaArrazoia(int idGailua)
         {
             string arrazoia = "Ez da zehaztu";
@@ -139,9 +139,14 @@ namespace INBENT_VISUAL.Kudeatzaileak
         #endregion
 
         #region GEHITU (CREATE)
+
         /// <summary>
-        /// Ordenagailu berri bat datu-basean gordetzen du (GAILUA eta ORDENAGAILUA taulak eguneratuz).
+        /// Ordenagailu berri bat datu-basean txertatzen du bi urratsetan:
+        /// Lehenik datu orokorrak GAILUA taulan txertatzen ditu, eta LAST_INSERT_ID() erabiliz,
+        /// sortutako ID berria berreskuratzen du datu teknikoak ORDENAGAILUA taulan gordetzeko.
         /// </summary>
+        /// <param name="pc">Gordeko den Ordenagailua objektua.</param>
+        /// <returns>Egia (true) txertaketa ondo burutu bada.</returns>
         public bool GehituOrdenagailua(Ordenagailua pc)
         {
             try
@@ -149,16 +154,15 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    // 1. Gailu orokorra sortu eta bere ID-a lortu
-                    string queryComun = "INSERT INTO GAILUA (mota, marka, eroste_data, gela, egoera) VALUES ('Ordenagailua', @marka, @data, @gela, 'aktibo'); SELECT LAST_INSERT_ID();";
+                    string queryComun = "INSERT INTO GAILUA (marka, eroste_data, gela, egoera, id_mintegia) VALUES (@marka, @data, @gela, 'aktibo', @idMintegia); SELECT LAST_INSERT_ID();";
                     MySqlCommand cmd1 = new MySqlCommand(queryComun, konexioa);
                     cmd1.Parameters.AddWithValue("@marka", pc.Marka);
                     cmd1.Parameters.AddWithValue("@data", pc.ErosteData);
                     cmd1.Parameters.AddWithValue("@gela", pc.Gela);
+                    cmd1.Parameters.AddWithValue("@idMintegia", pc.IdMintegia.HasValue ? (object)pc.IdMintegia.Value : DBNull.Value);
 
                     int nireId = Convert.ToInt32(cmd1.ExecuteScalar());
 
-                    // 2. Hardware datuak taula espezifikoan gorde lortutako ID-arekin
                     string queryTecnica = "INSERT INTO ORDENAGAILUA (id_gailua, ram, rom, cpu) VALUES (@id, @ram, @rom, @cpu)";
                     MySqlCommand cmd2 = new MySqlCommand(queryTecnica, konexioa);
                     cmd2.Parameters.AddWithValue("@id", nireId);
@@ -180,8 +184,10 @@ namespace INBENT_VISUAL.Kudeatzaileak
         }
 
         /// <summary>
-        /// Inprimagailu berri bat datu-basean gordetzen du.
+        /// Inprimagailu berri bat datu-basean txertatzen du bi urratsetan (GAILUA eta INPRIMAGAILUA taulak).
         /// </summary>
+        /// <param name="inprimagailua">Gordeko den Inprimagailua objektua.</param>
+        /// <returns>Egia (true) txertaketa ondo burutu bada.</returns>
         public bool GehituInprimagailua(Inprimagailua inprimagailua)
         {
             try
@@ -189,11 +195,12 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    string queryGailua = "INSERT INTO GAILUA (mota, marka, eroste_data, gela, egoera) VALUES ('Inprimagailua', @marka, @data, @gela, 'aktibo'); SELECT LAST_INSERT_ID();";
+                    string queryGailua = "INSERT INTO GAILUA (marka, eroste_data, gela, egoera, id_mintegia) VALUES (@marka, @data, @gela, 'aktibo', @idMintegia); SELECT LAST_INSERT_ID();";
                     MySqlCommand cmdGailua = new MySqlCommand(queryGailua, konexioa);
                     cmdGailua.Parameters.AddWithValue("@marka", inprimagailua.Marka);
                     cmdGailua.Parameters.AddWithValue("@data", inprimagailua.ErosteData.ToString("yyyy-MM-dd"));
                     cmdGailua.Parameters.AddWithValue("@gela", inprimagailua.Gela);
+                    cmdGailua.Parameters.AddWithValue("@idMintegia", inprimagailua.IdMintegia.HasValue ? (object)inprimagailua.IdMintegia.Value : DBNull.Value);
 
                     int idGailuBerria = Convert.ToInt32(cmdGailua.ExecuteScalar());
 
@@ -217,9 +224,13 @@ namespace INBENT_VISUAL.Kudeatzaileak
         #endregion
 
         #region ALDATU (UPDATE)
+
         /// <summary>
-        /// Dauden ordenagailu baten datuak eguneratzen ditu (Bi taulak).
+        /// Datu-basean jada existitzen den ordenagailu baten datu orokorrak (GAILUA) 
+        /// eta datu teknikoak (ORDENAGAILUA) eguneratzen ditu.
         /// </summary>
+        /// <param name="pc">Eguneratuko den Ordenagailua objektua bere ID-arekin.</param>
+        /// <returns>Egia (true) eguneraketa ondo burutu bada.</returns>
         public bool AldatuOrdenagailua(Ordenagailua pc)
         {
             try
@@ -227,11 +238,12 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    string queryComun = "UPDATE GAILUA SET marka = @marka, eroste_data = @data, gela = @gela WHERE id_gailua = @id";
+                    string queryComun = "UPDATE GAILUA SET marka = @marka, eroste_data = @data, gela = @gela, id_mintegia = @idMintegia WHERE id_gailua = @id";
                     MySqlCommand cmd1 = new MySqlCommand(queryComun, konexioa);
                     cmd1.Parameters.AddWithValue("@marka", pc.Marka);
                     cmd1.Parameters.AddWithValue("@data", pc.ErosteData);
                     cmd1.Parameters.AddWithValue("@gela", pc.Gela);
+                    cmd1.Parameters.AddWithValue("@idMintegia", pc.IdMintegia.HasValue ? (object)pc.IdMintegia.Value : DBNull.Value);
                     cmd1.Parameters.AddWithValue("@id", pc.IdGailua);
                     cmd1.ExecuteNonQuery();
 
@@ -244,7 +256,7 @@ namespace INBENT_VISUAL.Kudeatzaileak
 
                     int lerroak = cmd2.ExecuteNonQuery();
                     db.Itxi();
-                    return lerroak > 0;
+                    return true;
                 }
                 return false;
             }
@@ -256,7 +268,7 @@ namespace INBENT_VISUAL.Kudeatzaileak
         }
 
         /// <summary>
-        /// Dauden inprimagailu baten datuak eguneratzen ditu.
+        /// Existitzen den inprimagailu baten datu orokorrak eta teknikoak eguneratzen ditu datu-basean.
         /// </summary>
         public bool AldatuInprimagailua(Inprimagailua inprimagailua)
         {
@@ -265,11 +277,12 @@ namespace INBENT_VISUAL.Kudeatzaileak
                 MySqlConnection konexioa = db.Ireki();
                 if (konexioa != null)
                 {
-                    string queryComun = "UPDATE GAILUA SET marka = @marka, eroste_data = @data, gela = @gela WHERE id_gailua = @id";
+                    string queryComun = "UPDATE GAILUA SET marka = @marka, eroste_data = @data, gela = @gela, id_mintegia = @idMintegia WHERE id_gailua = @id";
                     MySqlCommand cmd1 = new MySqlCommand(queryComun, konexioa);
                     cmd1.Parameters.AddWithValue("@marka", inprimagailua.Marka);
                     cmd1.Parameters.AddWithValue("@data", inprimagailua.ErosteData);
                     cmd1.Parameters.AddWithValue("@gela", inprimagailua.Gela);
+                    cmd1.Parameters.AddWithValue("@idMintegia", inprimagailua.IdMintegia.HasValue ? (object)inprimagailua.IdMintegia.Value : DBNull.Value);
                     cmd1.Parameters.AddWithValue("@id", inprimagailua.IdGailua);
                     cmd1.ExecuteNonQuery();
 
@@ -293,10 +306,15 @@ namespace INBENT_VISUAL.Kudeatzaileak
         #endregion
 
         #region BAJA EMAN (SOFT DELETE)
+
         /// <summary>
-        /// Gailu baten egoera 'bajan' bezala jartzen du eta arrazoia gordetzen du.
-        /// Ez da datu-basetik ezabatzen, historiala ez galtzeko.
+        /// Gailu bat "Soft Delete" bidez kudeatzen du: ez du datu-basetik ezabatzen 
+        /// matxuren historiala ez apurtzeko, baizik eta bere egoera 'bajan' bezala 
+        /// ezartzen du eta kentzearen arrazoia gordetzen du.
         /// </summary>
+        /// <param name="idGailua">Baja eman nahi zaion gailuaren ID-a.</param>
+        /// <param name="arrazoia">Baja emateko arrazoiaren testua.</param>
+        /// <returns>Egia (true) eguneraketa ondo burutu bada.</returns>
         public bool BajaEman(int idGailua, string arrazoia)
         {
             try

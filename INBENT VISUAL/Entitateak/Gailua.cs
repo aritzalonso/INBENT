@@ -15,6 +15,10 @@ namespace INBENT_VISUAL.Entitateak
         public string Gela { get; set; }
         public string Egoera { get; set; } // 'aktibo', 'matxuratua' edo 'bajan'
         public string BajaArrazoia { get; set; } // Soilik gailua bajan badago erabiltzen da
+
+        // --- PROPIETATE BERRIAK MINTEGIENTZAT ---
+        public int? IdMintegia { get; set; } // int? da NULL onartzeko
+        public string MintegiIzena { get; set; } // Interfazean erakusteko
         #endregion
 
         #region ERAIKITZAILEA
